@@ -1,0 +1,6 @@
+venv/
+app.pem
+push.py
+__pycache__/
+servers.json
+history.json
