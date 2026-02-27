@@ -135,7 +135,11 @@ def parse_html_data(html):
             status_html = status_html.strip()
             status = status_html
 
-        data[url] = {"players": players, "status": status}
+        if url in data:
+            if players > data[url]["players"]:
+                data[url] = {"players": players, "status": status}
+        else:
+            data[url] = {"players": players, "status": status}
 
     return data
 
