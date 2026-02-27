@@ -339,6 +339,190 @@ async fn get_server_stats(
     }))
 }
 
+async fn get_global_stats(
+    State(pool): State<PgPool>,
+    Query(query): Query<StatsQuery>,
+) -> Result<RawJson<ServerStats>, StatusCode> {
+    let period = query.period.as_deref().unwrap_or("day");
+
+    let since = match period {
+        "day" => Some(Utc::now().naive_utc() - chrono::Duration::days(1)),
+        "week" => Some(Utc::now().naive_utc() - chrono::Duration::weeks(1)),
+        "month" => Some(Utc::now().naive_utc() - chrono::Duration::days(30)),
+        "year" => Some(Utc::now().naive_utc() - chrono::Duration::days(365)),
+        "all" => None,
+        _ => Some(Utc::now().naive_utc() - chrono::Duration::days(1)),
+    };
+
+    // For global stats, we need to sum players across all servers at each recorded_at timestamp
+    // First get basic stats from summed snapshots
+    let basic_stats = if let Some(since_time) = since {
+        sqlx::query_as::<_, BasicStats>(
+            "SELECT COUNT(*) as count, AVG(total)::float8 as avg, MAX(total)::int as max, MIN(total)::int as min
+             FROM (SELECT recorded_at, SUM(players) as total FROM player_history WHERE recorded_at > $1 GROUP BY recorded_at) t"
+        )
+        .bind(since_time)
+        .fetch_one(&pool)
+        .await
+    } else {
+        sqlx::query_as::<_, BasicStats>(
+            "SELECT COUNT(*) as count, AVG(total)::float8 as avg, MAX(total)::int as max, MIN(total)::int as min
+             FROM (SELECT recorded_at, SUM(players) as total FROM player_history GROUP BY recorded_at) t"
+        )
+        .fetch_one(&pool)
+        .await
+    }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+
+    // Weekday averages (0=Sunday, 6=Saturday)
+    let weekday_rows = if let Some(since_time) = since {
+        sqlx::query_as::<_, GroupedAvg>(
+            "SELECT EXTRACT(DOW FROM recorded_at)::float8 as group_key, AVG(total)::float8 as avg
+             FROM (SELECT recorded_at, SUM(players) as total FROM player_history WHERE recorded_at > $1 GROUP BY recorded_at) t
+             GROUP BY EXTRACT(DOW FROM recorded_at) ORDER BY group_key"
+        )
+        .bind(since_time)
+        .fetch_all(&pool)
+        .await
+    } else {
+        sqlx::query_as::<_, GroupedAvg>(
+            "SELECT EXTRACT(DOW FROM recorded_at)::float8 as group_key, AVG(total)::float8 as avg
+             FROM (SELECT recorded_at, SUM(players) as total FROM player_history GROUP BY recorded_at) t
+             GROUP BY EXTRACT(DOW FROM recorded_at) ORDER BY group_key"
+        )
+        .fetch_all(&pool)
+        .await
+    }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+
+    let mut weekday_averages = [0.0; 7];
+    for row in weekday_rows {
+        if let (Some(key), Some(avg)) = (row.group_key, row.avg) {
+            let idx = key as usize;
+            if idx < 7 {
+                weekday_averages[idx] = avg;
+            }
+        }
+    }
+
+    // Hourly averages (0-23)
+    let hourly_rows = if let Some(since_time) = since {
+        sqlx::query_as::<_, GroupedAvg>(
+            "SELECT EXTRACT(HOUR FROM recorded_at)::float8 as group_key, AVG(total)::float8 as avg
+             FROM (SELECT recorded_at, SUM(players) as total FROM player_history WHERE recorded_at > $1 GROUP BY recorded_at) t
+             GROUP BY EXTRACT(HOUR FROM recorded_at) ORDER BY group_key"
+        )
+        .bind(since_time)
+        .fetch_all(&pool)
+        .await
+    } else {
+        sqlx::query_as::<_, GroupedAvg>(
+            "SELECT EXTRACT(HOUR FROM recorded_at)::float8 as group_key, AVG(total)::float8 as avg
+             FROM (SELECT recorded_at, SUM(players) as total FROM player_history GROUP BY recorded_at) t
+             GROUP BY EXTRACT(HOUR FROM recorded_at) ORDER BY group_key"
+        )
+        .fetch_all(&pool)
+        .await
+    }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+
+    let mut hourly_averages = [0.0; 24];
+    for row in hourly_rows {
+        if let (Some(key), Some(avg)) = (row.group_key, row.avg) {
+            let idx = key as usize;
+            if idx < 24 {
+                hourly_averages[idx] = avg;
+            }
+        }
+    }
+
+    // Time-bucketed history for line charts
+    let history_rows = if let Some(since_time) = since {
+        match period {
+            "day" => {
+                sqlx::query_as::<_, BucketedHistory>(
+                    "SELECT bucket, AVG(total)::float8 as avg FROM (
+                        SELECT date_trunc('hour', recorded_at) +
+                               INTERVAL '30 minutes' * (EXTRACT(MINUTE FROM recorded_at)::int / 30) as bucket,
+                               SUM(players) as total
+                        FROM player_history WHERE recorded_at > $1
+                        GROUP BY recorded_at
+                     ) t GROUP BY bucket ORDER BY bucket ASC"
+                )
+                .bind(since_time)
+                .fetch_all(&pool)
+                .await
+            }
+            "week" => {
+                sqlx::query_as::<_, BucketedHistory>(
+                    "SELECT bucket, AVG(total)::float8 as avg FROM (
+                        SELECT date_trunc('hour', recorded_at) as bucket, SUM(players) as total
+                        FROM player_history WHERE recorded_at > $1
+                        GROUP BY recorded_at
+                     ) t GROUP BY bucket ORDER BY bucket ASC"
+                )
+                .bind(since_time)
+                .fetch_all(&pool)
+                .await
+            }
+            "month" => {
+                sqlx::query_as::<_, BucketedHistory>(
+                    "SELECT bucket, AVG(total)::float8 as avg FROM (
+                        SELECT date_trunc('hour', recorded_at) +
+                               INTERVAL '6 hours' * (EXTRACT(HOUR FROM recorded_at)::int / 6) as bucket,
+                               SUM(players) as total
+                        FROM player_history WHERE recorded_at > $1
+                        GROUP BY recorded_at
+                     ) t GROUP BY bucket ORDER BY bucket ASC"
+                )
+                .bind(since_time)
+                .fetch_all(&pool)
+                .await
+            }
+            _ => {
+                sqlx::query_as::<_, BucketedHistory>(
+                    "SELECT bucket, AVG(total)::float8 as avg FROM (
+                        SELECT date_trunc('day', recorded_at) as bucket, SUM(players) as total
+                        FROM player_history WHERE recorded_at > $1
+                        GROUP BY recorded_at
+                     ) t GROUP BY bucket ORDER BY bucket ASC"
+                )
+                .bind(since_time)
+                .fetch_all(&pool)
+                .await
+            }
+        }
+    } else {
+        sqlx::query_as::<_, BucketedHistory>(
+            "SELECT bucket, AVG(total)::float8 as avg FROM (
+                SELECT date_trunc('day', recorded_at) as bucket, SUM(players) as total
+                FROM player_history
+                GROUP BY recorded_at
+             ) t GROUP BY bucket ORDER BY bucket ASC"
+        )
+        .fetch_all(&pool)
+        .await
+    }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+
+    let history: Vec<HistoryPoint> = history_rows
+        .into_iter()
+        .filter_map(|row| {
+            Some(HistoryPoint {
+                timestamp: row.bucket?,
+                players: row.avg?,
+            })
+        })
+        .collect();
+
+    Ok(RawJson(ServerStats {
+        period: period.to_string(),
+        total_records: basic_stats.count.unwrap_or(0),
+        avg_players: basic_stats.avg.unwrap_or(0.0),
+        max_players: basic_stats.max.unwrap_or(0),
+        min_players: basic_stats.min.unwrap_or(0),
+        weekday_averages,
+        hourly_averages,
+        history,
+    }))
+}
+
 #[tokio::main]
 async fn main() {
     let database_url = env::var("DATABASE_URL").expect("DATABASE_URL must be set");
@@ -356,6 +540,7 @@ async fn main() {
         .route("/servers/:ip/:port", get(get_server))
         .route("/servers/:ip/:port/history", get(get_server_history))
         .route("/servers/:ip/:port/stats", get(get_server_stats))
+        .route("/stats", get(get_global_stats))
         .layer(cors)
         .with_state(pool);
 
