@@ -276,7 +276,7 @@ def save_to_db(conn, servers):
         for server in servers:
             world_id = extract_world_id(server["connection_url"])
 
-            address = server.get("address") or server.get("connection_url")
+            address = server.get("address")
             if not address:
                 continue
             topic_status = server.get("topic_status")
@@ -313,8 +313,10 @@ def resolve_addresses(servers):
     try:
         from hub_lookup import lookup_worlds
     except ImportError:
-        log("hub_lookup module not available - address resolution disabled")
-        return
+        log("hub_lookup module not available - using connection URLs as addresses")
+        for server in servers:
+            server["address"] = server["connection_url"]
+        return True
 
     world_ids = []
     id_to_server = {}
@@ -326,7 +328,7 @@ def resolve_addresses(servers):
             id_to_server[str(world_id)] = server
 
     if not world_ids:
-        return
+        return False
 
     try:
         results = lookup_worlds(world_ids)
@@ -338,6 +340,8 @@ def resolve_addresses(servers):
         log(f"Resolved {resolved}/{len(world_ids)} addresses")
     except Exception as e:
         log(f"Address resolution failed: {e}")
+
+    return False
 
 
 def ping_servers(servers, timeout=5):
