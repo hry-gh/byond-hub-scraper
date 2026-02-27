@@ -266,6 +266,13 @@ def init_db(conn):
             CREATE INDEX IF NOT EXISTS idx_player_history_recorded_at
             ON player_history(recorded_at)
         """)
+        cur.execute("""
+            CREATE TABLE IF NOT EXISTS address_cache (
+                world_id BIGINT PRIMARY KEY,
+                address TEXT NOT NULL,
+                cached_at TIMESTAMP DEFAULT NOW()
+            )
+        """)
     conn.commit()
 
 
@@ -321,7 +328,7 @@ def log(msg):
     print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {msg}", flush=True)
 
 
-def resolve_addresses(servers):
+def resolve_addresses(servers, conn=None):
     try:
         from hub_lookup import lookup_worlds
     except ImportError:
@@ -342,14 +349,51 @@ def resolve_addresses(servers):
     if not world_ids:
         return False
 
+    cached = {}
+    uncached_ids = world_ids
+    if conn:
+        with conn.cursor() as cur:
+            cur.execute("""
+                SELECT world_id, address FROM address_cache
+                WHERE world_id = ANY(%s)
+                AND cached_at > NOW() - INTERVAL '1 week'
+            """, ([int(wid) for wid in world_ids],))
+            for row in cur.fetchall():
+                cached[str(row[0])] = row[1]
+
+        for world_id, address in cached.items():
+            if world_id in id_to_server:
+                id_to_server[world_id]["address"] = address
+
+        uncached_ids = [wid for wid in world_ids if wid not in cached]
+        if cached:
+            log(f"Cache hit for {len(cached)}/{len(world_ids)} addresses")
+
+    if not uncached_ids:
+        return False
+
     try:
-        results = lookup_worlds(world_ids)
+        results = lookup_worlds(uncached_ids)
         resolved = 0
-        for world_id, result in zip(world_ids, results):
+        new_cache = []
+        for world_id, result in zip(uncached_ids, results):
             if result.address:
                 id_to_server[world_id]["address"] = result.address
+                new_cache.append((int(world_id), result.address))
                 resolved += 1
-        log(f"Resolved {resolved}/{len(world_ids)} addresses")
+        log(f"Resolved {resolved}/{len(uncached_ids)} addresses from hub")
+
+        if conn and new_cache:
+            with conn.cursor() as cur:
+                for world_id, address in new_cache:
+                    cur.execute("""
+                        INSERT INTO address_cache (world_id, address, cached_at)
+                        VALUES (%s, %s, NOW())
+                        ON CONFLICT (world_id) DO UPDATE SET
+                            address = EXCLUDED.address,
+                            cached_at = NOW()
+                    """, (world_id, address))
+            conn.commit()
     except Exception as e:
         log(f"Address resolution failed: {e}")
 
@@ -459,20 +503,23 @@ def run_once():
 
     log(f"Found {len(servers)} servers")
 
-    resolve_addresses(servers)
+    conn = None
+    if DATABASE_URL and not TEST_MODE:
+        import psycopg2
+        conn = psycopg2.connect(DATABASE_URL)
+        init_db(conn)
+
+    resolve_addresses(servers, conn)
     ping_servers(servers)
 
     if TEST_MODE:
         print(json.dumps(servers, indent=2))
         return servers
 
-    if not DATABASE_URL:
+    if not conn:
         log("DATABASE_URL not set, skipping database save")
         return servers
 
-    import psycopg2
-    conn = psycopg2.connect(DATABASE_URL)
-    init_db(conn)
     mark_all_offline(conn)
     save_to_db(conn, servers)
     conn.close()
