@@ -14,10 +14,12 @@ use tower_http::cors::{Any, CorsLayer};
 
 #[derive(Serialize, sqlx::FromRow)]
 struct Server {
-    world_id: i64,
+    address: String,
+    world_id: Option<i64>,
     name: String,
     description: Option<String>,
     status: Option<String>,
+    topic_status: Option<serde_json::Value>,
     players: i32,
     updated_at: NaiveDateTime,
 }
@@ -99,7 +101,7 @@ impl<T: Serialize> IntoResponse for RawJson<T> {
 
 async fn get_servers(State(pool): State<PgPool>) -> Result<RawJson<Vec<Server>>, StatusCode> {
     let servers = sqlx::query_as::<_, Server>(
-        "SELECT world_id, name, description, status, players, updated_at FROM servers ORDER BY players DESC",
+        "SELECT address, world_id, name, description, status, topic_status, players, updated_at FROM servers ORDER BY players DESC",
     )
     .fetch_all(&pool)
     .await
@@ -110,12 +112,13 @@ async fn get_servers(State(pool): State<PgPool>) -> Result<RawJson<Vec<Server>>,
 
 async fn get_server(
     State(pool): State<PgPool>,
-    Path(world_id): Path<i64>,
+    Path((ip, port)): Path<(String, u16)>,
 ) -> Result<RawJson<Server>, StatusCode> {
+    let address = format!("{}:{}", ip, port);
     let server = sqlx::query_as::<_, Server>(
-        "SELECT world_id, name, description, status, players, updated_at FROM servers WHERE world_id = $1",
+        "SELECT address, world_id, name, description, status, topic_status, players, updated_at FROM servers WHERE address = $1",
     )
-    .bind(world_id)
+    .bind(&address)
     .fetch_optional(&pool)
     .await
     .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?
@@ -126,9 +129,10 @@ async fn get_server(
 
 async fn get_server_history(
     State(pool): State<PgPool>,
-    Path(world_id): Path<i64>,
+    Path((ip, port)): Path<(String, u16)>,
     Query(query): Query<HistoryQuery>,
 ) -> Result<RawJson<Vec<PlayerHistoryPoint>>, StatusCode> {
+    let address = format!("{}:{}", ip, port);
     let since = query
         .since
         .and_then(|ts| DateTime::from_timestamp(ts, 0))
@@ -136,9 +140,9 @@ async fn get_server_history(
         .unwrap_or_else(|| Utc::now().naive_utc() - chrono::Duration::hours(24));
 
     let history = sqlx::query_as::<_, PlayerHistoryPoint>(
-        "SELECT players, recorded_at FROM player_history WHERE world_id = $1 AND recorded_at > $2 ORDER BY recorded_at ASC",
+        "SELECT players, recorded_at FROM player_history WHERE address = $1 AND recorded_at > $2 ORDER BY recorded_at ASC",
     )
-    .bind(world_id)
+    .bind(&address)
     .bind(since)
     .fetch_all(&pool)
     .await
@@ -149,9 +153,10 @@ async fn get_server_history(
 
 async fn get_server_stats(
     State(pool): State<PgPool>,
-    Path(world_id): Path<i64>,
+    Path((ip, port)): Path<(String, u16)>,
     Query(query): Query<StatsQuery>,
 ) -> Result<RawJson<ServerStats>, StatusCode> {
+    let address = format!("{}:{}", ip, port);
     let period = query.period.as_deref().unwrap_or("day");
 
     let since = match period {
@@ -167,18 +172,18 @@ async fn get_server_stats(
     let basic_stats = if let Some(since_time) = since {
         sqlx::query_as::<_, BasicStats>(
             "SELECT COUNT(*) as count, AVG(players)::float8 as avg, MAX(players) as max, MIN(players) as min
-             FROM player_history WHERE world_id = $1 AND recorded_at > $2"
+             FROM player_history WHERE address = $1 AND recorded_at > $2"
         )
-        .bind(world_id)
+        .bind(&address)
         .bind(since_time)
         .fetch_one(&pool)
         .await
     } else {
         sqlx::query_as::<_, BasicStats>(
             "SELECT COUNT(*) as count, AVG(players)::float8 as avg, MAX(players) as max, MIN(players) as min
-             FROM player_history WHERE world_id = $1"
+             FROM player_history WHERE address = $1"
         )
-        .bind(world_id)
+        .bind(&address)
         .fetch_one(&pool)
         .await
     }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
@@ -187,20 +192,20 @@ async fn get_server_stats(
     let weekday_rows = if let Some(since_time) = since {
         sqlx::query_as::<_, GroupedAvg>(
             "SELECT EXTRACT(DOW FROM recorded_at)::float8 as group_key, AVG(players)::float8 as avg
-             FROM player_history WHERE world_id = $1 AND recorded_at > $2
+             FROM player_history WHERE address = $1 AND recorded_at > $2
              GROUP BY EXTRACT(DOW FROM recorded_at) ORDER BY group_key"
         )
-        .bind(world_id)
+        .bind(&address)
         .bind(since_time)
         .fetch_all(&pool)
         .await
     } else {
         sqlx::query_as::<_, GroupedAvg>(
             "SELECT EXTRACT(DOW FROM recorded_at)::float8 as group_key, AVG(players)::float8 as avg
-             FROM player_history WHERE world_id = $1
+             FROM player_history WHERE address = $1
              GROUP BY EXTRACT(DOW FROM recorded_at) ORDER BY group_key"
         )
-        .bind(world_id)
+        .bind(&address)
         .fetch_all(&pool)
         .await
     }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
@@ -219,20 +224,20 @@ async fn get_server_stats(
     let hourly_rows = if let Some(since_time) = since {
         sqlx::query_as::<_, GroupedAvg>(
             "SELECT EXTRACT(HOUR FROM recorded_at)::float8 as group_key, AVG(players)::float8 as avg
-             FROM player_history WHERE world_id = $1 AND recorded_at > $2
+             FROM player_history WHERE address = $1 AND recorded_at > $2
              GROUP BY EXTRACT(HOUR FROM recorded_at) ORDER BY group_key"
         )
-        .bind(world_id)
+        .bind(&address)
         .bind(since_time)
         .fetch_all(&pool)
         .await
     } else {
         sqlx::query_as::<_, GroupedAvg>(
             "SELECT EXTRACT(HOUR FROM recorded_at)::float8 as group_key, AVG(players)::float8 as avg
-             FROM player_history WHERE world_id = $1
+             FROM player_history WHERE address = $1
              GROUP BY EXTRACT(HOUR FROM recorded_at) ORDER BY group_key"
         )
-        .bind(world_id)
+        .bind(&address)
         .fetch_all(&pool)
         .await
     }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
@@ -256,10 +261,10 @@ async fn get_server_stats(
                     "SELECT date_trunc('hour', recorded_at) +
                             INTERVAL '30 minutes' * (EXTRACT(MINUTE FROM recorded_at)::int / 30) as bucket,
                             AVG(players)::float8 as avg
-                     FROM player_history WHERE world_id = $1 AND recorded_at > $2
+                     FROM player_history WHERE address = $1 AND recorded_at > $2
                      GROUP BY bucket ORDER BY bucket ASC"
                 )
-                .bind(world_id)
+                .bind(&address)
                 .bind(since_time)
                 .fetch_all(&pool)
                 .await
@@ -267,10 +272,10 @@ async fn get_server_stats(
             "week" => {
                 sqlx::query_as::<_, BucketedHistory>(
                     "SELECT date_trunc('hour', recorded_at) as bucket, AVG(players)::float8 as avg
-                     FROM player_history WHERE world_id = $1 AND recorded_at > $2
+                     FROM player_history WHERE address = $1 AND recorded_at > $2
                      GROUP BY bucket ORDER BY bucket ASC"
                 )
-                .bind(world_id)
+                .bind(&address)
                 .bind(since_time)
                 .fetch_all(&pool)
                 .await
@@ -280,10 +285,10 @@ async fn get_server_stats(
                     "SELECT date_trunc('hour', recorded_at) +
                             INTERVAL '6 hours' * (EXTRACT(HOUR FROM recorded_at)::int / 6) as bucket,
                             AVG(players)::float8 as avg
-                     FROM player_history WHERE world_id = $1 AND recorded_at > $2
+                     FROM player_history WHERE address = $1 AND recorded_at > $2
                      GROUP BY bucket ORDER BY bucket ASC"
                 )
-                .bind(world_id)
+                .bind(&address)
                 .bind(since_time)
                 .fetch_all(&pool)
                 .await
@@ -291,10 +296,10 @@ async fn get_server_stats(
             _ => {
                 sqlx::query_as::<_, BucketedHistory>(
                     "SELECT date_trunc('day', recorded_at) as bucket, AVG(players)::float8 as avg
-                     FROM player_history WHERE world_id = $1 AND recorded_at > $2
+                     FROM player_history WHERE address = $1 AND recorded_at > $2
                      GROUP BY bucket ORDER BY bucket ASC"
                 )
-                .bind(world_id)
+                .bind(&address)
                 .bind(since_time)
                 .fetch_all(&pool)
                 .await
@@ -303,10 +308,10 @@ async fn get_server_stats(
     } else {
         sqlx::query_as::<_, BucketedHistory>(
             "SELECT date_trunc('day', recorded_at) as bucket, AVG(players)::float8 as avg
-             FROM player_history WHERE world_id = $1
+             FROM player_history WHERE address = $1
              GROUP BY bucket ORDER BY bucket ASC"
         )
-        .bind(world_id)
+        .bind(&address)
         .fetch_all(&pool)
         .await
     }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
@@ -347,9 +352,9 @@ async fn main() {
 
     let app = Router::new()
         .route("/servers", get(get_servers))
-        .route("/servers/:world_id", get(get_server))
-        .route("/servers/:world_id/history", get(get_server_history))
-        .route("/servers/:world_id/stats", get(get_server_stats))
+        .route("/servers/:ip/:port", get(get_server))
+        .route("/servers/:ip/:port/history", get(get_server_history))
+        .route("/servers/:ip/:port/stats", get(get_server_stats))
         .layer(cors)
         .with_state(pool);
 

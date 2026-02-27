@@ -4,3 +4,6 @@ push.py
 __pycache__/
 servers.json
 history.json
+
+# Closed source module for BYOND hub address resolution
+hub_lookup.py

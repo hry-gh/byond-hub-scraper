@@ -1,0 +1,6411 @@
+[2026-02-27 09:11:59] Scraping BYOND SS13 servers...
+[2026-02-27 09:12:15] Found 104 servers
+[2026-02-27 09:12:26] Resolved 104/104 addresses
+[2026-02-27 09:12:37] Pinged 99/104 servers
+[
+  {
+    "connection_url": "byond://BYOND.world.254865445",
+    "players": 98,
+    "name": "Ratwood Keep 2.0",
+    "description": "Completely rebased! 18+ anthro-friendly medieval RP with spell-slinging! | GAME STATUS: IN LOBBY | Round Time: NEW ROUND STARTING | Players: 100",
+    "status": "[<b>Ratwood Keep 2.0</b> \u2014 (<a href=\"https://discord.gg/Q9eDp9srmX\" rel=\"nofollow\">Discord</a>)]<br/>\nCompletely rebased! 18+ anthro-friendly medieval RP with spell-slinging!<br/>\nGAME STATUS: <b>IN LOBBY</b><br/>\nRound Time: <b>NEW ROUND STARTING</b><br/>\nPlayers: <b>100</b>]",
+    "address": "104.243.45.106:22096",
+    "topic_status": {
+      "version": [
+        "/tg/ Station 13"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "1567"
+      ],
+      "players": [
+        "98"
+      ],
+      "revision": [
+        "6717002e6ab54894cf7dacc30b57a18314329171"
+      ],
+      "revision_date": [
+        ""
+      ],
+      "admins": [
+        "4"
+      ],
+      "gamestate": [
+        "1"
+      ],
+      "map_name": [
+        "Rockhill"
+      ],
+      "round_duration": [
+        "425"
+      ],
+      "time_dilation_current": [
+        "0.5"
+      ],
+      "time_dilation_avg": [
+        "1.76604"
+      ],
+      "time_dilation_avg_slow": [
+        "2.22367"
+      ],
+      "time_dilation_avg_fast": [
+        "1.00287"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1024829156",
+    "players": 41,
+    "name": "[SS220][RU] BandaStation",
+    "description": "respawn, hosted by SS220 | Time: 01:17 | Map: Kilo Station",
+    "status": "[<a href=\"https://discord.gg/ss220\" rel=\"nofollow\"><b>[SS220][RU] BandaStation</b></a>: respawn, hosted by <b>SS220</b><br/>\nTime: <b>01:17</b><br/>\nMap: <b>Kilo Station</b>]",
+    "address": "116.202.156.155:2200",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "5660"
+      ],
+      "players": [
+        "41"
+      ],
+      "revision": [
+        "f3f23c11576e6fce9672e973912a35e3ff0841a4"
+      ],
+      "revision_date": [
+        "2026-02-26T18:45:34+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "tg"
+      ],
+      "admins": [
+        "1"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Kilo Station"
+      ],
+      "security_level": [
+        "red"
+      ],
+      "round_duration": [
+        "4729"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "0.767281"
+      ],
+      "time_dilation_avg_slow": [
+        "0.654627"
+      ],
+      "time_dilation_avg_fast": [
+        "0.38842"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "150"
+      ],
+      "popcap": [
+        "150"
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1478291722",
+    "players": 87,
+    "name": "AZURE PEAK",
+    "description": "18+ HRP Fantasy Server. | GAME STATUS: PLAYING | Round Time: 01:56 | Players: 87",
+    "status": "[<b>AZURE PEAK</b> \u2014 (<a href=\"https://discord.gg/NCFXUAgCPT\" rel=\"nofollow\">Discord</a>)]<br/>\n18+ HRP Fantasy Server.<br/>\nGAME STATUS: <b>PLAYING</b><br/>\nRound Time: <b>01:56</b><br/>\nPlayers: <b>87</b>]",
+    "address": "104.243.37.225:5223",
+    "topic_status": {
+      "Commskey disabled": [
+        ""
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1873371353",
+    "players": 49,
+    "name": "[RU] Twilight Axis (18+) - (WL -",
+    "description": "Roleplay Fantasy | D&D-like Server | GAME STATUS: PLAYING | Round Time: 01:34 | Players: 50",
+    "status": "[<b>[RU] Twilight Axis (18+) - (WL -</b> \u2014 (<a href=\"https://discord.gg/6Sga5Uvdn6\" rel=\"nofollow\">Discord</a>)]<br/>\nRoleplay Fantasy | D&amp;D-like Server<br/>\nGAME STATUS: <b>PLAYING</b><br/>\nRound Time: <b>01:34</b><br/>\nPlayers: <b>50</b>]",
+    "address": "57.128.211.173:7834",
+    "topic_status": {
+      "version": [
+        "/tg/ Station 13"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "1602"
+      ],
+      "players": [
+        "50"
+      ],
+      "revision": [
+        "b80e033a4ea421d45a3053e9bd0c62204f9dd815"
+      ],
+      "revision_date": [
+        ""
+      ],
+      "admins": [
+        "4"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Dun World"
+      ],
+      "round_duration": [
+        "5729"
+      ],
+      "time_dilation_current": [
+        "1"
+      ],
+      "time_dilation_avg": [
+        "1.76589"
+      ],
+      "time_dilation_avg_slow": [
+        "1.27828"
+      ],
+      "time_dilation_avg_fast": [
+        "2.29078"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "130"
+      ],
+      "extreme_popcap": [
+        "160"
+      ],
+      "popcap": [
+        "160"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.96009969",
+    "players": 40,
+    "name": "[RU] SS1984 Paradise Main",
+    "description": "NSS Kerberos (ParaCode) | REBRANDING: SS220 => SS1984 | 01:47:31, Green | russian language, Text-to-Speech, 781 voices, all races, Wiki , respawn",
+    "status": "[<b>[RU] SS1984 Paradise Main</b> \u2014 <b>NSS Kerberos</b> (ParaCode)<br/>\nREBRANDING: SS220 =&gt; SS1984<br/>\n01:47:14, Green<br/>\nrussian language, Text-to-Speech, 781 voices, all races, <a href=\"https://wiki.ss220.space\" rel=\"nofollow\">Wiki</a>, respawn]",
+    "address": "92.63.189.6:7721",
+    "topic_status": {
+      "version": "a840fd6b1e43f613639a12bfd08babc5e2c1b2dd",
+      "mode": "secret",
+      "respawn": 1,
+      "enter": 1,
+      "vote": 0,
+      "ai": 1,
+      "host": null,
+      "players": 40,
+      "roundtime": "01:48:37",
+      "stationtime": "22:41:33",
+      "oldstationtime": "13:41",
+      "listed": "Public",
+      "admins": 4,
+      "map_name": "Delta",
+      "ticker_state": 3
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1958903818",
+    "players": 60,
+    "name": "Colonial Marines | CM-SS13 | Now with Dual-Launcher Support!",
+    "description": "Map: LV-522 Chance's Claim | Mode: Distress Signal | Round time: 01:53",
+    "status": "[<a href=\"https://forum.cm-ss13.com/\" rel=\"nofollow\"><b>Colonial Marines | CM-SS13 | Now with Dual-Launcher Support!</b></a><br/>\nMap: <b>LV-522 Chance's Claim</b><br/>\nMode: <b>Distress Signal</b><br/>\nRound time: <b>01:53</b>]",
+    "address": "140.99.254.52:1400",
+    "topic_status": {
+      "mode": "Distress Signal",
+      "vote": 0,
+      "ai": 0,
+      "host": null,
+      "round_id": 32732,
+      "players": 61,
+      "revision": "083fcda833d8786d71b2ed7f9eaf45e36fc17e41",
+      "revision_date": "2026-02-27T07:14:52 00:00",
+      "admins": 2,
+      "gamestate": 4,
+      "map_name": "LV-522 Chance's Claim",
+      "security_level": "red",
+      "round_duration": 66068,
+      "time_dilation_current": 0,
+      "time_dilation_avg": 0.328613,
+      "time_dilation_avg_slow": 0.494447,
+      "time_dilation_avg_fast": 0.109742,
+      "mcpu": 2.51317,
+      "cpu": 8.83517
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1265438785",
+    "players": 40,
+    "name": "[RU] BlueMoon \u2014 ?????? ?????? | ????????? ??",
+    "description": "] ( (WL-Discord) ) (18+) | [18+] Russian modified S.P.L.U.R.T.! Hosted by SmiLeY ! | [Peace Syndicate Station, green alert, 40",
+    "status": "[<b>[RU] BlueMoon \u2014 ?????? ?????? | ????????? ??</b>] (<a href=\"https://discord.gg/e6pRWzMVMA\" rel=\"nofollow\">(WL-Discord</a>)</a>) (18+)<br/>\n[18+] Russian modified S.P.L.U.R.T.! Hosted by <b>SmiLeY</b>!<br/>\n[Peace Syndicate Station, green alert, 40]",
+    "address": "92.63.189.15:7888",
+    "topic_status": {
+      "mode": "Extended",
+      "round_id": "8319",
+      "enter": 1,
+      "map_name": "Peace Syndicate Station",
+      "players": 42,
+      "revision": "2b9d5cd9da9f9ebe38f26900ceba6e62d0253313",
+      "revision_date": "2026-02-27T04:35:42 00:00",
+      "round_duration": 39640
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.35185148",
+    "players": 27,
+    "name": "Goonstation 4 Roleplay: Sylvester",
+    "description": "The classic SS13 experience. \u2014 ( Discord ) | Time: 1:23 | Map: Oshan Laboratory, Abzu",
+    "status": "[<b><a href=\"https://goonhub.com\" rel=\"nofollow\">Goonstation 4 Roleplay: Sylvester</a></b> \u2014 The classic SS13 experience. \u2014 (<a href=\"http://bit.ly/gndscd\" rel=\"nofollow\">Discord</a>)<br/>\nTime: <b>1:23</b><br/>\nMap: <b>Oshan Laboratory, Abzu</b><br/>]",
+    "address": "15.235.86.196:26400",
+    "topic_status": {
+      "version": [
+        "Goonstation 13 (recbaf5801d407c0a9f72445a60b30989b381cea7)"
+      ],
+      "host": [
+        ""
+      ],
+      "gamestate": [
+        "7"
+      ],
+      "respawn": [
+        "0"
+      ],
+      "enter": [
+        "1"
+      ],
+      "round_id": [
+        "223171"
+      ],
+      "ai": [
+        "1"
+      ],
+      "mode": [
+        "secret"
+      ],
+      "round_duration": [
+        "5070"
+      ],
+      "shuttle_online": [
+        "0"
+      ],
+      "shuttle_direction": [
+        "1"
+      ],
+      "shuttle_location": [
+        "0"
+      ],
+      "shuttle_timer": [
+        "360"
+      ],
+      "station_name": [
+        "Syndicate Lab Lambda"
+      ],
+      "map_name": [
+        "Oshan Laboratory"
+      ],
+      "map_id": [
+        "OSHAN"
+      ],
+      "players": [
+        "27"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.364892603",
+    "players": 21,
+    "name": "Bubberstation [18+ enforced, furry RP w/ antags!]",
+    "description": "Play your original characters with us! Lighthearted roleplay with action AND ERP. | [Kilo Station, ~29 players, hosted by Moths, fo",
+    "status": "[<b>Bubberstation [18+ enforced, furry RP w/ antags!]</b> \u2014 (<a href=\"https://discord.gg/AvjrTqnqEx\" rel=\"nofollow\">Discord</a>)]<br/>\nPlay your original characters with us! Lighthearted roleplay with action AND ERP.<br/>\n[Kilo Station, ~29 players, hosted by <b>Moths, fo</b>]",
+    "address": "172.93.100.220:3000",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "10986"
+      ],
+      "players": [
+        "28"
+      ],
+      "revision": [
+        "07cb93892ce23de9d013be28aad74f737586cd3e"
+      ],
+      "revision_date": [
+        "2026-02-26T15:51:11+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        ""
+      ],
+      "admins": [
+        "1"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Kilo Station"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "13036"
+      ],
+      "time_dilation_current": [
+        "2"
+      ],
+      "time_dilation_avg": [
+        "1.50808"
+      ],
+      "time_dilation_avg_slow": [
+        "1.30479"
+      ],
+      "time_dilation_avg_fast": [
+        "1.0441"
+      ],
+      "soft_popcap": [
+        "80"
+      ],
+      "hard_popcap": [
+        "125"
+      ],
+      "extreme_popcap": [
+        "180"
+      ],
+      "popcap": [
+        "180"
+      ],
+      "bunkered": [
+        "1"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "escape"
+      ],
+      "shuttle_timer": [
+        "48"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.598458162",
+    "players": 33,
+    "name": "S.P.L.U.R.T 2.0: Gooning Boogaloo",
+    "description": "(18+) Renovated and improved iteration of the MERP server by excellence! | [Box Station, ~33 players, hosted by S.P.L.U.R.T. TEAM",
+    "status": "[<b>S.P.L.U.R.T 2.0: Gooning Boogaloo</b> \u2014 (<a href=\"https://discord.gg/vykusqyggk\" rel=\"nofollow\">Discord</a>)]<br/>\n(18+) Renovated and improved iteration of the MERP server by excellence!<br/>\n[Box Station, ~33 players, hosted by <b>S.P.L.U.R.T. TEAM</b>]",
+    "address": "94.130.237.220:42069",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "10124"
+      ],
+      "players": [
+        "32"
+      ],
+      "revision": [
+        "542567c300b17d948f971a4a7192de2f993014ac"
+      ],
+      "revision_date": [
+        "2026-02-25T23:12:43+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "splurt_tg"
+      ],
+      "public_address": [
+        "play.splurt.space:42069"
+      ],
+      "admins": [
+        "1"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Box Station"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "1204"
+      ],
+      "time_dilation_current": [
+        "7"
+      ],
+      "time_dilation_avg": [
+        "1.6872"
+      ],
+      "time_dilation_avg_slow": [
+        "1.51648"
+      ],
+      "time_dilation_avg_fast": [
+        "2.77591"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1152911721",
+    "players": 32,
+    "name": "? MonkeStation 2.0 - Now with 2000% Free Lag and 90% uptime. Medium-Rare Roleplay.",
+    "description": "hosted by TheDukeofOok | Beginner Friendly: Learn to play SS13! | Roleplay: [ Medium-Rare ] | Time: 01:03:33 | Map: Pubby Stati",
+    "status": "[<b>? MonkeStation 2.0 - Now with 2000% Free Lag and 90% uptime. Medium-Rare Roleplay.</b> : hosted by <b>TheDukeofOok</b><br/>\nBeginner Friendly: <b>Learn to play SS13!</b><br/>\nRoleplay: [<b>Medium-Rare</b>]<br/>\nTime: <b>01:03:33</b><br/>\nMap: <b>Pubby Stati</b>]",
+    "address": "104.194.9.21:3121",
+    "topic_status": {
+      "version": [
+        "MonkeStation 2.0"
+      ],
+      "respawn": [
+        "0"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "15188"
+      ],
+      "players": [
+        "33"
+      ],
+      "revision": [
+        "33598b2314fcccbd96d6554b6a15e73733724d66"
+      ],
+      "revision_date": [
+        "2026-02-27T05:01:56+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Pubby Station"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "3851"
+      ],
+      "time_dilation_current": [
+        "0.03125"
+      ],
+      "time_dilation_avg": [
+        "0.22561"
+      ],
+      "time_dilation_avg_slow": [
+        "0.561353"
+      ],
+      "time_dilation_avg_fast": [
+        "0.108403"
+      ],
+      "soft_popcap": [
+        "90"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        "90"
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ],
+      "shuttle_emergency_reason": [
+        ""
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.438617635",
+    "players": 25,
+    "name": "Vanderlin(Hosted by Monkestation)",
+    "description": "Vanderlin (Hosted by Monkestation) | Dark Medieval Fantasy Roleplay | [ GAME STATUS: PLAYING",
+    "status": "[<center><big><b><a href=\"https://discord.gg/zNAGFDcQ\" rel=\"nofollow\">Vanderlin</a> (Hosted by Monkestation)</b></big><br/>\n<b>Dark Medieval Fantasy Roleplay</b><br/>\n[<b>GAME STATUS:</b> PLAYING</center>]",
+    "address": "104.194.9.21:1541",
+    "topic_status": {
+      "version": [
+        "VANDERLIN"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "Frogge4704-03.20.50"
+      ],
+      "players": [
+        "25"
+      ],
+      "revision": [
+        "e2d7767c83a1528a00479e0927f965f70d4ad1b1"
+      ],
+      "revision_date": [
+        ""
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Vanderlin"
+      ],
+      "round_duration": [
+        "2653"
+      ],
+      "time_dilation_current": [
+        "0.03125"
+      ],
+      "time_dilation_avg": [
+        "0.0703107"
+      ],
+      "time_dilation_avg_slow": [
+        "0.106256"
+      ],
+      "time_dilation_avg_fast": [
+        "0.0448959"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "250"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        "250"
+      ],
+      "timeofday": [
+        "day"
+      ],
+      "dayspassed": [
+        "3"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1906717259",
+    "players": 16,
+    "name": "[RU] SS107 - ORBITALIS",
+    "description": "(18+) Corporate frontier station \u00e2\u0080\u00a2 Built on trust, not on rules | Try our proxy: https://prx.hornyjail.space | [Kilo Station, ~17 players, hosted by Raw",
+    "status": "[<b>[RU] SS107 - ORBITALIS</b> \u2014 (<a href=\"https://discord.gg/uj8HN4GB7s\" rel=\"nofollow\">Discord</a>)<br/>\n(18+) Corporate frontier station \u00e2\u20ac\u00a2 Built on trust, not on rules<br/>\nTry our proxy: <a href=\"https://prx.hornyjail.space\">https://prx.hornyjail.space</a><br/>\n[Kilo Station, ~17 players, hosted by <b>Raw</b>]",
+    "address": "45.141.208.222:41060",
+    "topic_status": {
+      "players": [
+        "16"
+      ],
+      "playing": [
+        "10"
+      ],
+      "ghost_cafe": [
+        "1"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1789284265",
+    "players": 23,
+    "name": "Colonial Marines | CM-SS13: PVE | Green",
+    "description": "Hosted by: | Round time: 01:53 | An RP server focused on a tight knit platoon fighting xenos! | Shoot the shit *and* shoot shit.",
+    "status": "[<a href=\"https://discord.com/invite/WgFbz9ZDSC\" rel=\"nofollow\"><b>Colonial Marines | CM-SS13: PVE | Green</b></a><br/>\nHosted by:<br/>\nRound time: <b>01:53</b><br/>\nAn RP server focused on a tight knit platoon fighting xenos!<br/>\nShoot the shit *and* shoot shit.]",
+    "address": "140.99.254.52:2600",
+    "topic_status": {
+      "mode": "Distress Signal: Lowpop",
+      "vote": 0,
+      "ai": 1,
+      "host": null,
+      "round_id": 9909,
+      "players": 22,
+      "revision": "40be457a069f1ce25adddb1cfd084aae48e7955c",
+      "revision_date": "2026-02-26T01:24:21 00:00",
+      "admins": 2,
+      "gamestate": 3,
+      "map_name": "LV-522 Chance's Claim Forecon",
+      "security_level": "green",
+      "round_duration": 53680,
+      "time_dilation_current": 0,
+      "time_dilation_avg": 0.000204734,
+      "time_dilation_avg_slow": 0.00338611,
+      "time_dilation_avg_fast": 7.60371e-06,
+      "mcpu": 2.91784,
+      "cpu": 12.2849
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1299642982",
+    "players": 14,
+    "name": "Nova Sector - Roleplay Server [Apply on Discord!]",
+    "description": "(18+) Roleplay-focused server, with an emphasis on player freedom! | [Delta Station, ~15 players, hosted by Nova Sector",
+    "status": "[<b>Nova Sector - Roleplay Server [Apply on Discord!]</b> \u2014 (<a href=\"https://discord.gg/hREK3jX84w\" rel=\"nofollow\">Discord</a>)]<br/>\n(18+) Roleplay-focused server, with an emphasis on player freedom!<br/>\n[Delta Station, ~14 players, hosted by <b>Nova Sector</b>]",
+    "address": "172.93.105.88:22095",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "16985"
+      ],
+      "players": [
+        "15"
+      ],
+      "revision": [
+        "03cf12df2ba6aa09ccbdff9cb55370f5b5ce4d89"
+      ],
+      "revision_date": [
+        "2026-02-27T02:56:26+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "Nova-tg-main"
+      ],
+      "admins": [
+        "3"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Delta Station"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "1336"
+      ],
+      "time_dilation_current": [
+        "3"
+      ],
+      "time_dilation_avg": [
+        "1.5256"
+      ],
+      "time_dilation_avg_slow": [
+        "1.12273"
+      ],
+      "time_dilation_avg_fast": [
+        "1.9749"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.81232278",
+    "players": 9,
+    "name": "Emerald Summit",
+    "description": "18+ Anthro Medieval Fantasy RP! (Scarlet Reach code hosted by Scarlet Reach enjoyers!) | GAME STATUS: PLAYING | Round Time: 01:44 | Players: 9",
+    "status": "[<b>Emerald Summit</b> \u2014 (<a href=\"https://discord.gg/EMUEZpDBp6\" rel=\"nofollow\">Discord</a>)]<br/>\n18+ Anthro Medieval Fantasy RP! (Scarlet Reach code hosted by Scarlet Reach enjoyers!)<br/>\nGAME STATUS: <b>PLAYING</b><br/>\nRound Time: <b>01:44</b><br/>\nPlayers: <b>9</b>]",
+    "address": "15.204.128.142:8085",
+    "topic_status": {
+      "Commskey disabled": [
+        ""
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1507207955",
+    "players": 3,
+    "name": "[RU] Celadon Shiptest: Alpha",
+    "description": "Celadon Space Station 13 ( Discord ) ( Github ): respawn, 4 players, hosted by Voiko",
+    "status": "[<b>[RU] Celadon Shiptest: Alpha</b> \u2014 <b>Celadon Space Station 13</b> (<a href=\"https://discord.com/invite/rxsggTJzY3\" rel=\"nofollow\">Discord</a>) (<a href=\"https://github.com/MysticalFaceLesS/Shiptest\" rel=\"nofollow\">Github</a>): respawn, 4 players, hosted by <b>Voiko</b>]",
+    "address": "45.93.200.145:1337",
+    "topic_status": {
+      "version": [
+        "Shiptest SS13"
+      ],
+      "mode": [
+        "secret_extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "5313"
+      ],
+      "players": [
+        "4"
+      ],
+      "revision": [
+        "d2a5b9edbf00768ee7b88042f47050ef3ff1fe12"
+      ],
+      "revision_date": [
+        ""
+      ],
+      "hub": [
+        "1"
+      ],
+      "admins": [
+        "0"
+      ],
+      "mentors": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "security_level": [
+        "blue"
+      ],
+      "round_duration": [
+        "713"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "1.76544e-05"
+      ],
+      "time_dilation_avg_slow": [
+        "0.00848847"
+      ],
+      "time_dilation_avg_fast": [
+        "5.21272e-09"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.2077317771",
+    "players": 3,
+    "name": "SS13 Redmoon",
+    "description": "[RU] Scarlet Dawn | GAME STATUS: PLAYING | Round Time: 03:56 | Players: 3",
+    "status": "[<b>SS13 Redmoon</b> \u2014 (<a href=\"https://discord.gg/eFpxg8qCgx\" rel=\"nofollow\">Discord</a>)]<br/>\n[RU] Scarlet Dawn<br/>\nGAME STATUS: <b>PLAYING</b><br/>\nRound Time: <b>03:56</b><br/>\nPlayers: <b>3</b>]",
+    "address": "92.63.189.15:7890",
+    "topic_status": {
+      "Commskey disabled": [
+        ""
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.2047040624",
+    "players": 9,
+    "name": "[MRP] Pentest SS13 - A Shiptest based server",
+    "description": "Tragedy Upsilon ( Discord ) ( Github ), Hub link doesn't work; use the link in https://pentest .",
+    "status": "[<b>[MRP] Pentest SS13 - A Shiptest based server</b> \u2014 <b>Tragedy Upsilon</b> (<a href=\"https://discord.gg/ydGPEejXZB\" rel=\"nofollow\">Discord</a>) (<a href=\"https://github.com/pentestss13/pentest\" rel=\"nofollow\">Github</a>), Hub link doesn't work; use the link in <a href=\"https://pentest\">https://pentest</a>.]",
+    "address": "142.44.142.228:1337",
+    "topic_status": null
+  },
+  {
+    "connection_url": "byond://BYOND.world.1663439150",
+    "players": 3,
+    "name": "[RU] The Fluffy Frontier 18+ MRP",
+    "description": "Russian furry MRP server running on modified Skyrat code | [NSS Journey, ~5 players",
+    "status": "[<b>[RU] The Fluffy Frontier 18+ MRP</b> \u2014 (<a href=\"https://discordapp.com/invite/5GvhwtY\" rel=\"nofollow\">Discord</a>)]<br/>\nRussian furry MRP server running on modified Skyrat code<br/>\n[NSS Journey, ~5 players]",
+    "address": "5.196.83.43:1984",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "14213"
+      ],
+      "players": [
+        "3"
+      ],
+      "revision": [
+        "783ca2468795c4b7e8050e29daf85ee74d6ace9c"
+      ],
+      "revision_date": [
+        "2026-02-25T11:07:07+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "FluffySTG"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "NSS Journey"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "11027"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "0"
+      ],
+      "time_dilation_avg_slow": [
+        "0"
+      ],
+      "time_dilation_avg_fast": [
+        "0"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1346066059",
+    "players": 3,
+    "name": "[SS220][RU] BandaMarines(CM)",
+    "description": "Map: New Varadero | Mode: Extended | Round time: 05:42",
+    "status": "[<a href=\"https://discord.gg/ss220\" rel=\"nofollow\"><b>[SS220][RU] BandaMarines(CM)</b></a><br/>\nMap: <b>New Varadero</b><br/>\nMode: <b>Extended</b><br/>\nRound time: <b>05:41</b>]",
+    "address": "116.202.156.155:5678",
+    "topic_status": {
+      "mode": "Extended",
+      "vote": 1,
+      "ai": 1,
+      "host": null,
+      "round_id": 3329,
+      "players": 3,
+      "revision": "f78c66278ba53ba4905561bf11133c22b4c26bba",
+      "revision_date": "2026-02-26T08:55:29 00:00",
+      "admins": 0,
+      "gamestate": 3,
+      "map_name": "New Varadero",
+      "security_level": "green",
+      "round_duration": 202671,
+      "time_dilation_current": 0,
+      "time_dilation_avg": 0.00405631,
+      "time_dilation_avg_slow": 0.00923022,
+      "time_dilation_avg_fast": 0.000549004,
+      "mcpu": 1.16752,
+      "cpu": 3.78368
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1991096839",
+    "players": 3,
+    "name": "INCITATUS TGMC REBORN \u2014 Iteron",
+    "description": "Map: Fort Phobos | Mode: Campaign | Round time: 07:49",
+    "status": "[<b><a href=\"https://discord.gg/Bp3532mnhv\" rel=\"nofollow\">INCITATUS TGMC REBORN \u2014 Iteron</a></b><br/>\nMap: <a href=\"https://webmap.affectedarc07.co.uk/maps/tgmc/Fort_Phobos.dmm\" rel=\"nofollow\"><b>Fort Phobos</b></a><br/>\nMode: <b>Campaign</b><br/>\nRound time: <b>07:49</b>]",
+    "address": "45.93.200.188:8000",
+    "topic_status": {
+      "version": [
+        "TGMC"
+      ],
+      "mode": [
+        "Campaign"
+      ],
+      "identifier": [
+        ""
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "266"
+      ],
+      "players": [
+        "3"
+      ],
+      "revision": [
+        "62835a49f0b0beba4400773777b69f7041f4e650"
+      ],
+      "revision_date": [
+        "2026-02-18T19:01:42+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "public_address": [
+        "byond://cosmic-overlord.ru:8000"
+      ],
+      "admins": [
+        "1"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Fort Phobos (Iteron)"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "17391"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "2.31873e-19"
+      ],
+      "time_dilation_avg_slow": [
+        "5.46309e-10"
+      ],
+      "time_dilation_avg_fast": [
+        "1.58727e-30"
+      ],
+      "soft_popcap": [
+        "105"
+      ],
+      "hard_popcap": [
+        "110"
+      ],
+      "extreme_popcap": [
+        "110"
+      ],
+      "popcap": [
+        "110"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1564956210",
+    "players": 3,
+    "name": "[SS13.RU] Chaotic Onyx(OnyxBay)",
+    "description": "secret, respawn, AI allowed, ~3 players, hosted by SS13.RU Team",
+    "status": "[<b>[SS13.RU] Chaotic Onyx(OnyxBay)</b>: secret, respawn, AI allowed, ~3 players, hosted by <b>SS13.RU Team</b>]",
+    "address": "46.229.213.2:2507",
+    "topic_status": {
+      "version": [
+        "Baystation12"
+      ],
+      "mode": [
+        "secret"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "players": [
+        "3"
+      ],
+      "stationtime": [
+        "21:35"
+      ],
+      "roundduration": [
+        "06:35"
+      ],
+      "map": [
+        "NSS Exodus"
+      ],
+      "player0": [
+        "Accoll"
+      ],
+      "player1": [
+        "Den206"
+      ],
+      "player2": [
+        "Kardagan"
+      ],
+      "admins": [
+        "1"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.248132604",
+    "players": 3,
+    "name": "[RU] [LRP] SS1984 Skyrat Event",
+    "description": "Event server of SS1984 Skyrat | [Delta Station, ~3 players",
+    "status": "[<b>[RU] [LRP] SS1984 Skyrat Event</b> \u2014 (<a href=\"http://discord.ss220.space\" rel=\"nofollow\">Discord</a>)]<br/>\nEvent server of SS1984 Skyrat<br/>\n[Delta Station, ~3 players]",
+    "address": "89.169.0.84:7731",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "1530"
+      ],
+      "players": [
+        "3"
+      ],
+      "revision": [
+        "7c061b224b109553d71d070de8b580e566241c6a"
+      ],
+      "revision_date": [
+        "2026-02-21"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "tgstation"
+      ],
+      "public_address": [
+        "89.169.0.84:7731"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Delta Station"
+      ],
+      "security_level": [
+        "blue"
+      ],
+      "round_duration": [
+        "5052"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "0.00499786"
+      ],
+      "time_dilation_avg_slow": [
+        "0.0489377"
+      ],
+      "time_dilation_avg_fast": [
+        "0.000139705"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "100"
+      ],
+      "popcap": [
+        "100"
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.578058321",
+    "players": 2,
+    "name": "Psychonaut Station",
+    "description": "] \u2014 T\u00fcrk\u00e7e SS13 ( Discord ) | Time: 02:13 | Map: MetaStation",
+    "status": "[<b>Psychonaut Station</b>] <b>\u2014 T?rk?e SS13</b> (<a href=\"https://ss13.tr/discord\" rel=\"nofollow\">Discord</a>)<br/>\nTime: <b>02:13</b><br/>\nMap: <b>MetaStation</b>]",
+    "address": "88.99.198.158:3131",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "0"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "10111"
+      ],
+      "players": [
+        "2"
+      ],
+      "revision": [
+        "3e1a99a29a033ec8b9dc80f820d35d504781f34d"
+      ],
+      "revision_date": [
+        "2026-02-21T21:58:16+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        ""
+      ],
+      "public_address": [
+        "play.ss13.tr:3131"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "MetaStation"
+      ],
+      "security_level": [
+        "blue"
+      ],
+      "round_duration": [
+        "8128"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "0.312435"
+      ],
+      "time_dilation_avg_slow": [
+        "0.169756"
+      ],
+      "time_dilation_avg_fast": [
+        "0.273625"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "called"
+      ],
+      "shuttle_timer": [
+        "540"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.320202155",
+    "players": 3,
+    "name": "[MRP-HRP] [24/7] [ENG] Iris Station [America, Asia and Australia Relays]",
+    "description": "A European Medium-High Roleplay server with in-depth customisation and multiple races. Ending February 28th 2026",
+    "status": "[<b>[MRP-HRP] [24/7] [ENG] Iris Station [America, Asia and Australia Relays]</b> \u2014 (<a href=\"discord.com/invite/azps5ydx2F\" rel=\"nofollow\">Discord</a>)]<br/>\nA European Medium-High Roleplay server with in-depth customisation and multiple races. Ending February 28th 2026]",
+    "address": "65.109.147.172:4200",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        "Guest-1284567205"
+      ],
+      "round_id": [
+        "4342"
+      ],
+      "players": [
+        "6"
+      ],
+      "revision": [
+        "68e6eff83e2caac4da587b71647023ca8d3ef606"
+      ],
+      "revision_date": [
+        "2026-02-27T02:55:01+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "Iris Station"
+      ],
+      "admins": [
+        "1"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "MetaStation"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "18591"
+      ],
+      "time_dilation_current": [
+        "0.03125"
+      ],
+      "time_dilation_avg": [
+        "0.0358791"
+      ],
+      "time_dilation_avg_slow": [
+        "0.0796974"
+      ],
+      "time_dilation_avg_fast": [
+        "0.0233264"
+      ],
+      "soft_popcap": [
+        "30"
+      ],
+      "hard_popcap": [
+        "40"
+      ],
+      "extreme_popcap": [
+        "60"
+      ],
+      "popcap": [
+        "60"
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "called"
+      ],
+      "shuttle_timer": [
+        "547"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1527750560",
+    "players": 9,
+    "name": "The Final Nights [18+] \u2014 Apply on Discord!",
+    "description": "Persistent 18+ Heavy-RP immersive roleplay set in the World of Darkness, running modified WoD13 code. | Hosted by The Regime",
+    "status": "[<a href=\"https://discord.gg/invite/hQHAK67Drd\" rel=\"nofollow\"><b>The Final Nights [18+] \u2014 Apply on Discord!</b></a><br/>\nPersistent 18+ Heavy-RP immersive roleplay set in the World of Darkness, running modified WoD13 code.<br/>\nHosted by <b>The Regime</b>]",
+    "address": "148.113.198.98:1337",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        "Guest-2755983506"
+      ],
+      "round_id": [
+        "2926"
+      ],
+      "players": [
+        "9"
+      ],
+      "revision": [
+        "0ecc99f2ed34fa96a20abe7dd6dd7d373af008d5"
+      ],
+      "revision_date": [
+        "2026-02-27T01:19:42+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "San Francisco"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "184"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "0.954114"
+      ],
+      "time_dilation_avg_slow": [
+        "1.57633"
+      ],
+      "time_dilation_avg_fast": [
+        "0.469528"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "1"
+      ],
+      "interviews": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.692412795",
+    "players": 3,
+    "name": "[EU] /tg/station Terry",
+    "description": "hosted by /tg/station | Time: 05:30 | Map: Tramstation",
+    "status": "[<b>[EU] /tg/station Terry</b> : hosted by <b>/tg/station</b><br/>\nTime: <b>05:30</b><br/>\nMap: <b>Tramstation</b>]",
+    "address": "188.245.253.9:3336",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "0"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "260270"
+      ],
+      "players": [
+        "3"
+      ],
+      "revision": [
+        "2e28116570f623a362394404e250200467506966"
+      ],
+      "revision_date": [
+        "2026-02-27T00:30:44+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "terry"
+      ],
+      "public_address": [
+        "terry.tgstation13.org:3336"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Tramstation"
+      ],
+      "security_level": [
+        "blue"
+      ],
+      "round_duration": [
+        "19949"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "0.269904"
+      ],
+      "time_dilation_avg_slow": [
+        "0.15062"
+      ],
+      "time_dilation_avg_fast": [
+        "0.25545"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1011932452",
+    "players": 2,
+    "name": "[RU] DARKNESS: The Collapse \u2014 (18+)",
+    "description": "A lovely revamped bite from original Vampire: the Masquerade 13 creator. | Roleplay server set in World of Darkness universe.: hosted by BadTeammate",
+    "status": "[<a href=\"https://discord.gg/ZzCrYNaFzJ\" rel=\"nofollow\"><b>[RU] DARKNESS: The Collapse \u2014 (18+)</b></a><br/>\nA lovely revamped bite from original Vampire: the Masquerade 13 creator.<br/>\nRoleplay server set in World of Darkness universe.: hosted by <b>BadTeammate</b>]",
+    "address": "92.63.189.34:55558",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "2418"
+      ],
+      "players": [
+        "2"
+      ],
+      "revision": [
+        "89ed9d9352f4ea01763a942c3f7aec9e05313b51"
+      ],
+      "revision_date": [
+        "2026-02-24T23:15:43+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "vampire"
+      ],
+      "admins": [
+        "1"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "San Francisco"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "6494"
+      ],
+      "time_dilation_current": [
+        "7.5"
+      ],
+      "time_dilation_avg": [
+        "6.34729"
+      ],
+      "time_dilation_avg_slow": [
+        "3.8362"
+      ],
+      "time_dilation_avg_fast": [
+        "7.29025"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1402885441",
+    "players": 1,
+    "name": "[RU][18+][MRP]Space Cub",
+    "description": "Russian NovaSector-based server. Pure NovaSector experience. | [Void Raptor, ~1 player, hosted by NeuroCat",
+    "status": "[<b>[RU][18+][MRP]Space Cub</b> \u2014 (<a href=\"https://discord.gg/4nrn6qga2h\" rel=\"nofollow\">Discord</a>)]<br/>\nRussian NovaSector-based server. Pure NovaSector experience.<br/>\n[Void Raptor, ~1 player, hosted by <b>NeuroCat</b>]",
+    "address": "195.122.229.26:1337",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "1058"
+      ],
+      "players": [
+        "1"
+      ],
+      "revision": [
+        "08a67f2ea76b53fae099228d1d58041b89613618"
+      ],
+      "revision_date": [
+        "2026-02-24T07:38:16+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        ""
+      ],
+      "public_address": [
+        "195.122.229.26"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Void Raptor"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "1817"
+      ],
+      "time_dilation_current": [
+        "1"
+      ],
+      "time_dilation_avg": [
+        "30.2174"
+      ],
+      "time_dilation_avg_slow": [
+        "1221.84"
+      ],
+      "time_dilation_avg_fast": [
+        "0.768601"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.2108966478",
+    "players": 2,
+    "name": "[SS220 |RU| Paradise - Black]",
+    "description": "] \u2014 ??? ???????? ( Discord ) | Banda & Streamers project, 791 voices | 4:34, Green | [MedRP, Wiki , respawn",
+    "status": "[<b>[SS220 |RU| Paradise - Black]</b>] \u2014 <b>??? ????????</b> (<a href=\"https://discord.gg/ss220\" rel=\"nofollow\">Discord</a>)<br/>\nBanda &amp; Streamers project, 791 voices<br/>\n4:34, Green<br/>\n[MedRP, <a href=\"https://wiki.ss220.club\" rel=\"nofollow\">Wiki</a>, respawn]",
+    "address": "116.202.156.155:4000",
+    "topic_status": {
+      "version": "9155195f169e9ad80b8c40cde5b050eb5f0c25a9",
+      "mode": "dynamic",
+      "respawn": 1,
+      "enter": 1,
+      "ai": 1,
+      "host": null,
+      "players": 2,
+      "roundtime": "04:39:36",
+      "stationtime": "07:35:17",
+      "oldstationtime": "16:35",
+      "listed": "Public",
+      "admins": 0,
+      "map_name": "\u0418\u0421\u041d \u041a\u0435\u0440\u0431\u0435\u0440\u043e\u0441",
+      "round_id": "18401",
+      "perfmetrics": {
+        "td": {
+          "time_dilation_current": 0,
+          "time_dilation_avg_fast": 0.0100961,
+          "time_dilation_avg": 0.0270059,
+          "time_dilation_avg_slow": 0.0572953
+        },
+        "mcpu": 0.836773,
+        "cpu": 21.5031
+      }
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.45340964",
+    "players": 1,
+    "name": "[RU] SS1984 Paradise Secondary",
+    "description": "NSS Kerberos (ParaCode) | REBRANDING: SS220 => SS1984 | 03:22:34, Green | russian language, Text-to-Speech, 781 voices, all races, Wiki , respawn",
+    "status": "[<b>[RU] SS1984 Paradise Secondary</b> \u2014 <b>NSS Kerberos</b> (ParaCode)<br/>\nREBRANDING: SS220 =&gt; SS1984<br/>\n03:22:34, Green<br/>\nrussian language, Text-to-Speech, 781 voices, all races, <a href=\"https://wiki.ss220.space\" rel=\"nofollow\">Wiki</a>, respawn]",
+    "address": "92.63.189.6:7726",
+    "topic_status": {
+      "version": "",
+      "mode": "secret",
+      "respawn": 1,
+      "enter": 1,
+      "vote": 0,
+      "ai": 1,
+      "host": null,
+      "players": 2,
+      "roundtime": "03:46:16",
+      "stationtime": "05:39:05",
+      "oldstationtime": "15:39",
+      "listed": "Public",
+      "admins": 0,
+      "map_name": "Delta",
+      "ticker_state": 3
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.222759231",
+    "players": 1,
+    "name": "Aurorastation: Heavy Roleplay Server",
+    "description": "SCCV Horizon ( Forums ): secret, respawn, AI allowed, ~1 player, hosted by aurorastation",
+    "status": "[<b>Aurorastation: Heavy Roleplay Server</b> \u2014 <b>SCCV Horizon</b> (<a href=\"https://forums.aurorastation.org/\" rel=\"nofollow\">Forums</a>): secret, respawn, AI allowed, ~1 player, hosted by <b>aurorastation</b>]",
+    "address": "136.243.0.189:1234",
+    "topic_status": {
+      "statuscode": 400,
+      "response": "Bad Request - Invalid/no JSON data sent."
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1292359026",
+    "players": 1,
+    "name": "SoL|NTF vs Alien M/ERP +18 - NTC Nine Tailed Fox",
+    "description": "Map: Lava Outpost V1 | Mode: Secret of Life - Main | Round time: 0:17",
+    "status": "[<b><a href=\"https://discord.gg/cDNZXUWjmJ\" rel=\"nofollow\">SoL|NTF vs Alien M/ERP +18 - NTC Nine Tailed Fox</a></b><br/>\nMap: Lava Outpost V1<br/>\nMode: Secret of Life - Main<br/>\nRound time: 0:17]<br/>\n            Hosted by <a href=\"https://www.byond.com/members/Zeldazackman\" user_ckey=\"zeldazackman\">Zeldazackman</a>",
+    "address": "98.115.46.21:32993",
+    "topic_status": {
+      "version": [
+        "NTC"
+      ],
+      "mode": [
+        "Secret of Life - Main"
+      ],
+      "identifier": [
+        ""
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        "Zeldazackman"
+      ],
+      "round_id": [
+        "3112"
+      ],
+      "players": [
+        "1"
+      ],
+      "revision": [
+        "5afaf750b713b008001fd407fbc42fb5cfc7d171"
+      ],
+      "revision_date": [
+        ""
+      ],
+      "hub": [
+        "1"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "4"
+      ],
+      "map_name": [
+        "Lava Outpost V1 (NTC Nine Tailed Fox)"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "2331"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "1.81029e-10"
+      ],
+      "time_dilation_avg_slow": [
+        "0.000758519"
+      ],
+      "time_dilation_avg_fast": [
+        "4.37323e-17"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.241171288",
+    "players": 1,
+    "name": "Dream Keep",
+    "description": "M-RP / H-RP Medieval Fantasy: DnD Inspired Setting! (18+) | GAME STATUS: PLAYING | Round Time: 03:14 | Player: 1",
+    "status": "[<b>Dream Keep</b> \u2014 (<a href=\"https://discord.gg/YTp2GTzwyv\" rel=\"nofollow\">Discord)]<br/>\nM-RP / H-RP Medieval Fantasy: DnD Inspired Setting! (18+)<br/>\nGAME STATUS: <b>PLAYING</b><br/>\nRound Time: <b>03:14",
+    "address": "95.217.91.182:6969",
+    "topic_status": {
+      "Commskey disabled": [
+        ""
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.921741471",
+    "players": 1,
+    "name": "NSS Cyberiad",
+    "description": "(ParaCode) | 3:06:09:43, Green | Wiki , respawn",
+    "status": "[<b>NSS Cyberiad</b> (ParaCode)<br/>\n3:06:09:43, Green<br/>\n<a href=\"http://example.org\" rel=\"nofollow\">Wiki</a>, respawn]",
+    "address": "95.165.148.158:999",
+    "topic_status": {
+      "version": "",
+      "mode": "extended",
+      "respawn": 1,
+      "enter": 1,
+      "vote": 0,
+      "ai": 1,
+      "host": "Guest-930261127",
+      "players": 1,
+      "roundtime": "3:15:24:05",
+      "stationtime": "11:19:49",
+      "oldstationtime": "99:19",
+      "listed": "Public",
+      "admins": 1,
+      "map_name": "Cyberiad",
+      "ticker_state": 3
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1043399955",
+    "players": 1,
+    "name": "[ES] Vanderlin - Hispania (Hosted by Kotiro22)",
+    "description": "Servidor de hispania con roleplay de fantasia medival oscura. | [ GAME STATUS: IN LOBBY",
+    "status": "[<center><big><b>[ES] Vanderlin - Hispania (Hosted by Kotiro22)</b></big><br/>\n<b>Servidor de hispania con roleplay de fantasia medival oscura.</b><br/>\n[<b>GAME STATUS:</b> IN LOBBY</center>]",
+    "address": "104.243.41.36:1343",
+    "topic_status": {
+      "version": [
+        "VANDERLIN"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        "Guest-1318436422"
+      ],
+      "round_id": [
+        "Dagger312-21.10.56"
+      ],
+      "players": [
+        "1"
+      ],
+      "revision": [
+        "d523ded93b533537c5370fe4779dfa16d6d42a9d"
+      ],
+      "revision_date": [
+        ""
+      ],
+      "admins": [
+        "1"
+      ],
+      "gamestate": [
+        "1"
+      ],
+      "map_name": [
+        "Daftmarsh"
+      ],
+      "round_duration": [
+        "14408"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "3.79066e-05"
+      ],
+      "time_dilation_avg_slow": [
+        "0.000644062"
+      ],
+      "time_dilation_avg_fast": [
+        "5.03747e-07"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "100"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        "100"
+      ],
+      "timeofday": [
+        "dawn"
+      ],
+      "dayspassed": [
+        "1"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1514131426",
+    "players": 1,
+    "name": "/vg/station",
+    "description": "MedRP - Vanilla SS13 experience, no ERP, a classic, family owned and operated server since 1912, 18+ | Mode: Dynamic | Time: 00:31 | Map: Packed Station",
+    "status": "[<b>/vg/station</b>MedRP - Vanilla SS13 experience, no ERP, a classic, family owned and operated server since 1912, 18+<br/>\nMode: Dynamic<br/>\nTime: <b>00:31</b><br/>\nMap: <b>Packed Station</b>]",
+    "address": "172.93.101.77:7777",
+    "topic_status": {
+      "version": [
+        "veegee"
+      ],
+      "mode": [
+        "Dynamic Mode"
+      ],
+      "respawn": [
+        "0"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        "Guest-5486742"
+      ],
+      "players": [
+        "1"
+      ],
+      "map_name": [
+        "Packed Station"
+      ],
+      "station_time": [
+        "13:43"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "active_players": [
+        "1"
+      ],
+      "revision": [
+        "c34a3a3d503e341edbee494020933fac9440c35c\r\n"
+      ],
+      "player0": [
+        "Bath-Salt-Dumplings"
+      ],
+      "admins": [
+        "0"
+      ],
+      "afk_admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1670736321",
+    "players": 1,
+    "name": "Paradise Station",
+    "description": "] \u2014 NSS Cerebron ( Discord ) | The Perfect Mix of RP & Action | 1:17, Green | [Now with threaded atmospherics. Lag is even more gone., https://www.paradisestation.org/w",
+    "status": "[<b>Paradise Station</b>] \u2014 <b>NSS Cerebron</b> (<a href=\"https://discord.gg/YJDsXFE\" rel=\"nofollow\">Discord</a>)<br/>\nThe Perfect Mix of RP &amp; Action<br/>\n1:17, Green<br/>\n[Now with threaded atmospherics. Lag is even more gone., &lt;a href=\"<a href=\"https://www.paradisestation.org/w\">https://www.paradisestation.org/w</a>]",
+    "address": "172.93.101.245:6666",
+    "topic_status": null
+  },
+  {
+    "connection_url": "byond://BYOND.world.1347065762",
+    "players": 1,
+    "name": "[SS220][RU] Bandastation Prime WL",
+    "description": "respawn, hosted by SS220 | Time: 00:23 | Map: Cyberiad",
+    "status": "[<b>[SS220][RU] Bandastation Prime WL</b>: respawn, hosted by <b>SS220</b><br/>\nTime: <b>00:23</b><br/>\nMap: <b>Cyberiad</b>]",
+    "address": "116.202.156.155:3254",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "5659"
+      ],
+      "players": [
+        "1"
+      ],
+      "revision": [
+        "5b4945072e880f3073878281caeba5867c2bec13"
+      ],
+      "revision_date": [
+        "2026-02-26T16:22:36+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "tg"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Cyberiad"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "4519"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "1.24766e-06"
+      ],
+      "time_dilation_avg_slow": [
+        "0.000707371"
+      ],
+      "time_dilation_avg_fast": [
+        "3.17184e-10"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1163299555",
+    "players": 1,
+    "name": "BeeStation Sage - Roleplay",
+    "description": "South Hazard Papa | Join us for a new-player friendly, classic space station 13 roleplaying experience! Time: 00:55:45 | Players: 1/100 | Map: MetaStation",
+    "status": "[<a href=\"beestation13.com\" rel=\"nofollow\"><b>BeeStation Sage - Roleplay</b> - <b>South Hazard Papa</b></a><br/>\nJoin us for a new-player friendly, classic space station 13 roleplaying experience!\n<p>Time: <b>00:54:45</b><br/>\nPlayers: <b>1/100</b><br/>\nMap: <b>MetaStation</b></p>]",
+    "address": "78.47.208.70:7878",
+    "topic_status": {
+      "statuscode": 400,
+      "response": "Bad Request - Invalid JSON format"
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1372414008",
+    "players": 1,
+    "name": "ROGUEWORLD 2E (18+)",
+    "description": "Multiplayer Computer Adventure Game | Hosted by zeththemagician",
+    "status": "[<center><a href=\"https://discord.gg/WVXCmZh3ew\" rel=\"nofollow\"><big><b>ROGUEWORLD 2E (18+)</b></big></a><br/>\n<b>Multiplayer Computer Adventure Game</b></center>\n<br/>\nHosted by zeththemagician]",
+    "address": "104.153.108.69:1624",
+    "topic_status": null
+  },
+  {
+    "connection_url": "byond://BYOND.world.366833522",
+    "players": 0,
+    "name": "Polaris - Heavy Roleplay",
+    "description": "Cynosure Station ( Default ): extended, respawn, persistence enabled, persistence mapload enabled, AI allowed, ~1 player, hosted by ss13polaris.com",
+    "status": "[<b>Polaris - Heavy Roleplay</b> \u2014 <b>Cynosure Station</b> (<a href=\"http://\" rel=\"nofollow\">Default</a>): extended, respawn, persistence enabled, persistence mapload enabled, AI allowed, ~1 player, hosted by <b>ss13polaris.com</b>]",
+    "address": "66.70.180.142:4000",
+    "topic_status": {
+      "version": [
+        "Polaris"
+      ],
+      "mode": [
+        "changeling"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "persistance": [
+        "0"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "players": [
+        "0"
+      ],
+      "stationtime": [
+        "07:00"
+      ],
+      "roundduration": [
+        "00:00"
+      ],
+      "map": [
+        "Cynosure Station"
+      ],
+      "admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1092536977",
+    "players": 0,
+    "name": "fstation",
+    "description": "Freedom, freshness, fun! Imageboard focus, no d*scord, no limits.",
+    "status": "[<b>fstation</b> - Freedom, freshness, fun! Imageboard focus, no d*scord, no limits.]",
+    "address": "15.204.180.11:10001",
+    "topic_status": {
+      "version": [
+        "veegee"
+      ],
+      "mode": [
+        "Dynamic Mode"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "players": [
+        "0"
+      ],
+      "map_name": [
+        "Waystation"
+      ],
+      "station_time": [
+        "1:52"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "active_players": [
+        "0"
+      ],
+      "revision": [
+        ""
+      ],
+      "admins": [
+        "0"
+      ],
+      "afk_admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1364025800",
+    "players": 0,
+    "name": "Offical Halo: Space Station Evolved (Med-High RP)",
+    "description": "UNSC Outpost ( Forums | Discord ): STARTING , respawn, vote, AI allowed, hosted by BDpuffy420",
+    "status": "[<b>Offical Halo: Space Station Evolved (Med-High RP)</b> \u2014 <b>UNSC Outpost</b> (<a href=\"https://projectunsc.org\" rel=\"nofollow\">Forums</a>|<a href=\"https://discord.gg/f8jpDfSdfr\" rel=\"nofollow\">Discord</a>): <b>STARTING</b>, respawn, vote, AI allowed, hosted by <b>BDpuffy420</b>]",
+    "address": "135.148.137.81:2701",
+    "topic_status": {
+      "version": [
+        "Halo: Space Station Evolved"
+      ],
+      "mode": [
+        "base_assault_capture_and_hold"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "players": [
+        "0"
+      ],
+      "stationtime": [
+        "07:02"
+      ],
+      "roundduration": [
+        "00:02"
+      ],
+      "map": [
+        "111 Tauri System, UNSC Outpost"
+      ],
+      "admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1559189172",
+    "players": 0,
+    "name": "Fallout 13: Big Iron - Now on 516!",
+    "description": "The Wasteland ( Discord )] | RP/PvP - Fallout for Normal People - Celebrating Three Years! | [Central Pahrump, 1 player, hosted by Preston Garvey",
+    "status": "[<b>Fallout 13: Big Iron - Now on 516!</b> \u2014 <b>The Wasteland</b> (<a href=\"https://discord.gg/7RWZGXQqgr\" rel=\"nofollow\">Discord</a>)]<br/>\nRP/PvP - Fallout for Normal People - Celebrating Three Years!<br/>\n[Central Pahrump, 1 player, hosted by <b>Preston Garvey</b>]",
+    "address": "135.148.150.231:1337",
+    "topic_status": {
+      "Rate limited.": [
+        ""
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1042745746",
+    "players": 0,
+    "name": "Bubberstation [18+ enforced, furry RP w/ antags!]",
+    "description": "Play your original characters with us! Lighthearted roleplay with action AND ERP. | [Moon Station, ~1 player, hosted by Moths, for",
+    "status": "[<b>Bubberstation [18+ enforced, furry RP w/ antags!]</b> \u2014 (<a href=\"https://discord.gg/AvjrTqnqEx\" rel=\"nofollow\">Discord</a>)]<br/>\nPlay your original characters with us! Lighthearted roleplay with action AND ERP.<br/>\n[Moon Station, ~1 player, hosted by <b>Moths, for</b>]",
+    "address": "198.23.193.74:1337",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "10951"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "b4f2c0494973802e3f0387555a9a500c63f7d747"
+      ],
+      "revision_date": [
+        "2026-02-21T18:52:06+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        ""
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Moon Station"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "1700"
+      ],
+      "time_dilation_current": [
+        "35240"
+      ],
+      "time_dilation_avg": [
+        "43539"
+      ],
+      "time_dilation_avg_slow": [
+        "41375.7"
+      ],
+      "time_dilation_avg_fast": [
+        "39563.6"
+      ],
+      "soft_popcap": [
+        "80"
+      ],
+      "hard_popcap": [
+        "125"
+      ],
+      "extreme_popcap": [
+        "180"
+      ],
+      "popcap": [
+        "180"
+      ],
+      "bunkered": [
+        "1"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "docked"
+      ],
+      "shuttle_timer": [
+        "102"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.665181866",
+    "players": 0,
+    "name": "Toolbox Station",
+    "description": "( Forums | Discord ) | Map: Box Station | Round Time: 2:24 | -LRP, Newbie Friendly | -High Sec Standard | -Stun Based Combat",
+    "status": "[<b>Toolbox Station</b> (<a href=\"http://toolboxrp.boards.net/\" rel=\"nofollow\">Forums</a>|<a href=\"https://discord.gg/SwXyqCn\" rel=\"nofollow\">Discord</a>)<br/>\nMap: Box Station<br/>\nRound Time: 2:24<br/>\n-LRP, Newbie Friendly<br/>\n-High Sec Standard<br/>\n-Stun Based Combat]",
+    "address": "45.77.104.119:42069",
+    "topic_status": null
+  },
+  {
+    "connection_url": "byond://BYOND.world.1576507930",
+    "players": 0,
+    "name": "byond://BYOND.world.1576507930",
+    "description": "",
+    "status": "",
+    "address": "172.93.111.242:2351",
+    "topic_status": {
+      "version": [
+        "Yogstation 13"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "76"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "42e229b485521222c7a418bea57c7919095a8cba"
+      ],
+      "revision_date": [
+        ""
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "[ALPHA] DonutStation"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "1526"
+      ],
+      "time_dilation_current": [
+        "34071.3"
+      ],
+      "time_dilation_avg": [
+        "13630.5"
+      ],
+      "time_dilation_avg_slow": [
+        "7948.69"
+      ],
+      "time_dilation_avg_fast": [
+        "22795.5"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "80"
+      ],
+      "extreme_popcap": [
+        "82"
+      ],
+      "popcap": [
+        "82"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1689751069",
+    "players": 0,
+    "name": "Monkestation Colonial Monkeys",
+    "description": "Hosted by: yournamehere | Round time: 01:02 | An RP server focused on a tight knit platoon fighting xenos! | Shoot the shit *and* shoot shit.",
+    "status": "[<a href=\"\" rel=\"nofollow\"><b>Monkestation Colonial Monkeys</b></a><br/>\nHosted by: <b>yournamehere</b><br/>\nRound time: <b>01:02</b><br/>\nAn RP server focused on a tight knit platoon fighting xenos!<br/>\nShoot the shit *and* shoot shit.]",
+    "address": "104.194.9.21:3123",
+    "topic_status": {
+      "mode": "Extended",
+      "vote": 0,
+      "ai": 1,
+      "host": null,
+      "round_id": 83,
+      "players": 0,
+      "revision": "75a7a58ceaea3d384418704abec0209a2011e9ef",
+      "revision_date": "2026-02-21T22:08:51 00:00",
+      "admins": 0,
+      "gamestate": 1,
+      "map_name": "OBW - Oread Garrison",
+      "security_level": "green",
+      "round_duration": 37750,
+      "time_dilation_current": 51699.9,
+      "time_dilation_avg": 53392.2,
+      "time_dilation_avg_slow": 39157.4,
+      "time_dilation_avg_fast": 56588.2,
+      "mcpu": 0.0152861,
+      "cpu": 0.568426
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1677698207",
+    "players": 0,
+    "name": "Eldermoor",
+    "description": "Dark Medieval Fantasy Roleplay | [ GAME STATUS: PLAYING",
+    "status": "[<center><a href=\"https://discord.gg/42ZUAjsCGH\" rel=\"nofollow\"><big><b>Eldermoor</b></big></a><br/>\n<b>Dark Medieval Fantasy Roleplay</b><br/>\n[<b>GAME STATUS:</b> PLAYING</center>]",
+    "address": "64.20.37.50:2011",
+    "topic_status": {
+      "Commskey disabled": [
+        ""
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1618915812",
+    "players": 0,
+    "name": "Civ13 TDM (Official)",
+    "description": "Map: Marco Polo Bridge (00:00) | Gamemode: King of the Hill",
+    "status": "[<center><a href=\"https://civ13.com/discord\" rel=\"nofollow\" target=\"_blank\"><b>Civ13 TDM (Official)</b></a></center>\n<br/>\n<img src=\"https://i.imgur.com/napac0L.png\"/><br/>\n<b>Map:</b> Marco Polo Bridge (00:00)<br/>\n<b>Gamemode:</b> King of the Hill]",
+    "address": "164.132.145.5:1714",
+    "topic_status": {
+      "version": [
+        "Civilization 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "game_id": [
+        "cEd-c19Y"
+      ],
+      "players": [
+        "0"
+      ],
+      "hub": [
+        "0"
+      ],
+      "admins": [
+        "0"
+      ],
+      "map_name": [
+        "Marco Polo Bridge"
+      ],
+      "map_age": [
+        "1937"
+      ],
+      "map_gamemode": [
+        "Normal"
+      ],
+      "round_duration": [
+        "00:00"
+      ],
+      "round_duration_in_second": [
+        "0"
+      ],
+      "round_duration_in_ticks": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1478341507",
+    "players": 0,
+    "name": "fulpstation",
+    "description": "] \u2014 ( Discord ) | Beginner Friendly: Learn to play SS13! | Roleplay: [ Medium ] | Time: [ 00:25 ] | Map: [ Heliostation",
+    "status": "[<b>fulpstation</b>] \u2014 (<a href=\"\" rel=\"nofollow\">Discord</a>)",
+    "address": "77.68.100.1:1338",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "0"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "34888"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "2705fda6503372667dec6bc20fe772d00e15359d"
+      ],
+      "revision_date": [
+        "2026-02-20T17:23:37+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "fulpstation"
+      ],
+      "public_address": [
+        "fulp.gg:1338"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Heliostation"
+      ],
+      "security_level": [
+        "blue"
+      ],
+      "round_duration": [
+        "1470"
+      ],
+      "time_dilation_current": [
+        "59417.5"
+      ],
+      "time_dilation_avg": [
+        "12772.6"
+      ],
+      "time_dilation_avg_slow": [
+        "21250.1"
+      ],
+      "time_dilation_avg_fast": [
+        "30522.2"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1511356344",
+    "players": 0,
+    "name": "RiftWorks",
+    "description": "respawn, hosted by RiftWorks | Time: 03:45 | Map: Delta Station",
+    "status": "[<a href=\"https://discord.gg/M5kmgHbY\" rel=\"nofollow\"><b>RiftWorks</b></a>: respawn, hosted by <b>RiftWorks</b><br/>\nTime: <b>03:45</b><br/>\nMap: <b>Delta Station</b>]",
+    "address": "185.97.255.20:7878",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "74"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "e9592835fc88da6e10cce5b57ce428ad60b0850b"
+      ],
+      "revision_date": [
+        "2026-01-17T21:15:25+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "tg"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Delta Station"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "14853"
+      ],
+      "time_dilation_current": [
+        "60008"
+      ],
+      "time_dilation_avg": [
+        "10930.4"
+      ],
+      "time_dilation_avg_slow": [
+        "17323.9"
+      ],
+      "time_dilation_avg_fast": [
+        "28539.3"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "150"
+      ],
+      "popcap": [
+        "150"
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "called"
+      ],
+      "shuttle_timer": [
+        "208"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.44415848",
+    "players": 0,
+    "name": "RU/EN - ZeroOnyx - Inspired by 2022 OnyxBay",
+    "description": "Focused on a mostly classic, controversy-free experience. | Everyone is welcome! | Learn more: about ZeroOnyx and FAQ",
+    "status": "[<b>RU/EN - ZeroOnyx - Inspired by 2022 OnyxBay</b><br/>\nFocused on a mostly classic, controversy-free experience.<br/>\nEveryone is welcome!<br/>\nLearn more: <a href=\"https://about.zeroonyx.com\" rel=\"nofollow\">about ZeroOnyx</a> and <a href=\"https://faq.zeroonyx.com\" rel=\"nofollow\">FAQ</a>]",
+    "address": "65.21.228.217:14076",
+    "topic_status": {
+      "code": "unknown_topic"
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.999650442",
+    "players": 0,
+    "name": "Stella Nova",
+    "description": "ISEO Endeavour ( Discord ): extended, respawn, vote, AI allowed, ~1 player, hosted by Hearth of Hestia staff",
+    "status": "[<b>Stella Nova</b> \u2014 <b>ISEO Endeavour</b> (<a href=\"https://discord.gg/avCuJ9yVxt\" rel=\"nofollow\">Discord</a>): extended, respawn, vote, AI allowed, ~1 player, hosted by <b>Hearth of Hestia staff</b>]",
+    "address": "78.46.176.30:8008",
+    "topic_status": {
+      "version": [
+        "Nebula"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "1"
+      ],
+      "ai": [
+        "0"
+      ],
+      "host": [
+        ""
+      ],
+      "players": [
+        "0"
+      ],
+      "stationtime": [
+        "10:12"
+      ],
+      "roundduration": [
+        "16:11"
+      ],
+      "map": [
+        "ISEO Endeavour"
+      ],
+      "admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1570408266",
+    "players": 0,
+    "name": "Sojourn 13",
+    "description": "Nadezhda Colony ( Discord ): ghostship, respawn, vote, AI allowed, ~1 player, hosted by Sojourn",
+    "status": "[<b>Sojourn 13</b> \u2014 <b>Nadezhda Colony</b> (<a href=\"https://discord.com/invite/aXrM3SDyEw\" rel=\"nofollow\">Discord</a>): ghostship, respawn, vote, AI allowed, ~1 player, hosted by <b>Sojourn</b>]",
+    "address": "104.243.38.223:35565",
+    "topic_status": {
+      "version": [
+        "Sojourn"
+      ],
+      "storyteller": [
+        "ghostship"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "revision": [
+        "b542141ee2037eee83d76073cbd978f8fd7995ef"
+      ],
+      "revision_date": [
+        "2026-02-26T23:03:27+00:00"
+      ],
+      "players": [
+        "0"
+      ],
+      "shiptime": [
+        "04:19"
+      ],
+      "roundduration": [
+        "03:19"
+      ],
+      "admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1482387633",
+    "players": 0,
+    "name": "Requiem 13 \u2014 Vampires!",
+    "description": "(18+) HRP Urban Fantasy server based on VtR 2e, focusing on supernatural political drama. Apply now! | : hosted by The All Night Society",
+    "status": "[<a href=\"https://discord.gg/invite/5AS5Ms5cxP\" rel=\"nofollow\"><b>Requiem 13 \u2014 Vampires!</b></a><br/>\n(18+) HRP Urban Fantasy server based on VtR 2e, focusing on supernatural political drama. Apply now!<br/>\n: hosted by <b>The All Night Society</b>]",
+    "address": "78.46.64.181:30000",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "1549"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "dc578a22acd41e1acd819163d2b27a1363265dd9"
+      ],
+      "revision_date": [
+        "2026-01-01T09:58:46+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Long Beach"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "2438"
+      ],
+      "time_dilation_current": [
+        "60006"
+      ],
+      "time_dilation_avg": [
+        "28531.6"
+      ],
+      "time_dilation_avg_slow": [
+        "25412.6"
+      ],
+      "time_dilation_avg_fast": [
+        "44910.3"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "1"
+      ],
+      "interviews": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.372539928",
+    "players": 0,
+    "name": "Baystation",
+    "description": "Wiki | Discord | Action Roleplay observed by All The Rats | Playing secret with 0 players",
+    "status": "[<b>Baystation</b> <a href=\"https://www.baystation.xyz\" rel=\"nofollow\">Wiki</a> | <a href=\"https://www.baystation.xyz/discord\" rel=\"nofollow\">Discord</a><br/>\n<b>Action Roleplay</b> observed by <b>All The Rats</b><br/>\nPlaying <b>secret</b> with 0 players]",
+    "address": "148.113.193.129:8000",
+    "topic_status": {
+      "version": [
+        "Baystation"
+      ],
+      "mode": [
+        "secret"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "0"
+      ],
+      "host": [
+        ""
+      ],
+      "players": [
+        "0"
+      ],
+      "stationtime": [
+        "01:00"
+      ],
+      "roundduration": [
+        "00:00"
+      ],
+      "map": [
+        "SEV Torch"
+      ],
+      "admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1506072988",
+    "players": 0,
+    "name": "Lobotomy Corporation 13 (Fixer Edition)",
+    "description": "] \u2014 It's fixing time! ( Discord ) | Map: [Fixer Office ] | Roleplay: [ Medium",
+    "status": "[<b>Lobotomy Corporation 13 (Fixer Edition)</b>] \u2014 <b>It's fixing time!</b> (<a href=\"https://discord.gg/Wskt3j29\" rel=\"nofollow\">Discord</a>)",
+    "address": "5.161.71.194:1337",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "mode": [
+        "classic"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "2400"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "ad125c5fdfd5e65742e827b7a2f4e1bac94e27af"
+      ],
+      "revision_date": [
+        "2026-02-01T15:34:45+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Fixer Office"
+      ],
+      "security_level": [
+        "no warning"
+      ],
+      "round_duration": [
+        "10158"
+      ],
+      "time_dilation_current": [
+        "58803"
+      ],
+      "time_dilation_avg": [
+        "14086.3"
+      ],
+      "time_dilation_avg_slow": [
+        "10511.9"
+      ],
+      "time_dilation_avg_fast": [
+        "34521.3"
+      ],
+      "soft_popcap": [
+        "35"
+      ],
+      "hard_popcap": [
+        "100"
+      ],
+      "extreme_popcap": [
+        "100"
+      ],
+      "popcap": [
+        "100"
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.2009478376",
+    "players": 0,
+    "name": "Skyrat SS13 - Roleplay Server for Serious and Silly RP [Weekly events, 18+]",
+    "description": "18+ Anthro MRP-Immersive Server - Open Entry; DOB Required | [MetaStation, ~1 player, hosted by SRC",
+    "status": "[<b>Skyrat SS13 - Roleplay Server for Serious and Silly RP [Weekly events, 18+]</b> \u2014 (<a href=\"https://discord.gg/hGpZ4Z3\" rel=\"nofollow\">Discord</a>)]<br/>\n18+ Anthro MRP-Immersive Server - Open Entry; DOB Required<br/>\n[MetaStation, ~1 player, hosted by <b>SRC</b>]",
+    "address": "104.243.45.106:22094",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "12426"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "168d743b6e8be16a942d964d0790a14a21d1d06d"
+      ],
+      "revision_date": [
+        "2024-11-18T05:38:01+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "skyrat-tg-main"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "MetaStation"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "2829"
+      ],
+      "time_dilation_current": [
+        "60018"
+      ],
+      "time_dilation_avg": [
+        "43175.1"
+      ],
+      "time_dilation_avg_slow": [
+        "18364.3"
+      ],
+      "time_dilation_avg_fast": [
+        "57305.6"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "called"
+      ],
+      "shuttle_timer": [
+        "951"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.199693011",
+    "players": 0,
+    "name": "[Uzay Istasyonu Kaos | T\u00fcrk\u00e7e SS13 - WL yok - yeni oyuncu dostu] Hosted by SiyahUsta",
+    "description": "respawn | Time: 03:22 | Map: MetaStation",
+    "status": "[<b>[Uzay Istasyonu Kaos | T?rk?e SS13 - WL yok - yeni oyuncu dostu] Hosted by SiyahUsta</b> : respawn<br/>\nTime: <b>03:22</b><br/>\nMap: <b>MetaStation</b>]",
+    "address": "213.199.63.84:1337",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "81"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "69e5ec0321372b1949ed663c9be77c72c1eb9cda"
+      ],
+      "revision_date": [
+        "2025-12-11T01:32:31+01:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        ""
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "MetaStation"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "13048"
+      ],
+      "time_dilation_current": [
+        "57940.8"
+      ],
+      "time_dilation_avg": [
+        "39437.5"
+      ],
+      "time_dilation_avg_slow": [
+        "19406.3"
+      ],
+      "time_dilation_avg_fast": [
+        "53462.7"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1557872351",
+    "players": 0,
+    "name": "byond://BYOND.world.1557872351",
+    "description": "",
+    "status": "",
+    "address": "92.63.189.15:7894",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "mode": [
+        "classic"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "394"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "39ef3d14b3235f21c84126744ec97265c79a9ebd"
+      ],
+      "revision_date": [
+        "2026-01-22T16:39:20+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "1"
+      ],
+      "map_name": [
+        "Facility A-098 ALPHA"
+      ],
+      "security_level": [
+        "no warning"
+      ],
+      "round_duration": [
+        "52"
+      ],
+      "time_dilation_current": [
+        "57777"
+      ],
+      "time_dilation_avg": [
+        "3466.62"
+      ],
+      "time_dilation_avg_slow": [
+        "346.662"
+      ],
+      "time_dilation_avg_fast": [
+        "17333.1"
+      ],
+      "soft_popcap": [
+        "35"
+      ],
+      "hard_popcap": [
+        "45"
+      ],
+      "extreme_popcap": [
+        "50"
+      ],
+      "popcap": [
+        "50"
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1540712007",
+    "players": 0,
+    "name": "Infinity RU",
+    "description": "SS13.SU] Infinity RU ( Discord ) A medium/hard RP server with modified Bay12 code. | Players: 1 | Mode: extended",
+    "status": "[SS13.SU] <b>Infinity RU</b> (<a href=\"https://discord.gg/N4atUkH\" rel=\"nofollow\">Discord</a>) A medium/hard RP server with modified Bay12 code.<br/>\n<b>Players:</b> 1 | <b>Mode:</b> extended]",
+    "address": "185.186.143.195:7777",
+    "topic_status": {
+      "version": [
+        "Baystation12"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "players": [
+        "0"
+      ],
+      "stationtime": [
+        "04:13"
+      ],
+      "roundduration": [
+        "00:13"
+      ],
+      "map": [
+        "NSV Sierra"
+      ],
+      "admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1222973769",
+    "players": 0,
+    "name": "CRXB-Industries Experimental",
+    "description": "IrisSS13 ( IRC )] | Unofficial Test server running Iris code. | [Delta Station, ~0 players, hosted by craftxbox",
+    "status": "[<b>CRXB-Industries Experimental</b> \u2014 IrisSS13 (<a href=\"https://crxb.cc/irc\" rel=\"nofollow\">IRC</a>)]<br/>\nUnofficial Test server running Iris code.<br/>\n[Delta Station, ~0 players, hosted by <b>craftxbox</b>]",
+    "address": "174.117.104.37:6060",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "35"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "4ed82809db786bcf6d41929927a42db047895568"
+      ],
+      "revision_date": [
+        "2026-01-11T20:41:54+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "iris"
+      ],
+      "public_address": [
+        "raw.crxb.cc:6060"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Delta Station"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "1898"
+      ],
+      "time_dilation_current": [
+        "52827"
+      ],
+      "time_dilation_avg": [
+        "3225.1"
+      ],
+      "time_dilation_avg_slow": [
+        "326.785"
+      ],
+      "time_dilation_avg_fast": [
+        "15977"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1659645775",
+    "players": 0,
+    "name": "TerraGov Marine Corps \u2014 Combat Patrol Base",
+    "description": "Map: Orion Military Outpost | Mode: Sensor Capture | Round time",
+    "status": "[<b><a href=\"https://discord.gg/2dFpfNE\" rel=\"nofollow\">TerraGov Marine Corps \u2014 Combat Patrol Base</a></b><br/>\nMap: <a href=\"https://webmap.affectedarc07.co.uk/maps/tgmc/orionoutpost.dmm\" rel=\"nofollow\"><b>Orion Military Outpost</b></a><br/>\nMode: <b>Sensor Capture</b><br/>\nRound time]",
+    "address": "51.79.52.10:5337",
+    "topic_status": {
+      "version": [
+        "TGMC"
+      ],
+      "mode": [
+        "Sensor Capture"
+      ],
+      "identifier": [
+        "TGMC"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "39511"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "4486689d6678c59e9966cb317bddfcb06198e0f1"
+      ],
+      "revision_date": [
+        "2026-02-21T12:00:06+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "public_address": [
+        "tgmc.tgstation13.org:5337"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "4"
+      ],
+      "map_name": [
+        "Orion Military Outpost (Combat Patrol Base)"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "49654"
+      ],
+      "time_dilation_current": [
+        "1259"
+      ],
+      "time_dilation_avg": [
+        "1211.01"
+      ],
+      "time_dilation_avg_slow": [
+        "1224.84"
+      ],
+      "time_dilation_avg_fast": [
+        "1179.6"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "200"
+      ],
+      "extreme_popcap": [
+        "250"
+      ],
+      "popcap": [
+        "250"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.2079656662",
+    "players": 0,
+    "name": "RU StoneKeep",
+    "description": "Scarlet Reach build | GAME STATUS: IN LOBBY | Round Time: NEW ROUND STARTING | Player: 1",
+    "status": "[<b>RU StoneKeep</b> \u2014 (<a href=\"https://discord.gg/qMNr2gYqTv\" rel=\"nofollow\">Discord</a>)]<br/>\nScarlet Reach build<br/>\nGAME STATUS: <b>IN LOBBY</b><br/>\nRound Time: <b>NEW ROUND STARTING</b><br/>\nPlayer: <b>1</b>]",
+    "address": "46.229.213.2:2512",
+    "topic_status": {
+      "version": [
+        "/tg/ Station 13"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "369"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "76cd18bd4217fa804da3d0856f8f7c235331ab85"
+      ],
+      "revision_date": [
+        "2026-01-10"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "1"
+      ],
+      "map_name": [
+        "Dun World"
+      ],
+      "round_duration": [
+        "2473"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "0.0955011"
+      ],
+      "time_dilation_avg_slow": [
+        "0.245323"
+      ],
+      "time_dilation_avg_fast": [
+        "0.0117427"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "150"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        "150"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1433681117",
+    "players": 0,
+    "name": "Lupine Pass",
+    "description": "A lewd PVPVE dungeon dungeon crawler experience set in a tundra WL only, apply on discord https://discord.gg/fpCGYMt3RK. | GAME STATUS: IN LOBBY | Round Time: NE",
+    "status": "[<b>Lupine Pass</b> \u2014 (<a href=\"https://discord.gg/fpCGYMt3RK\" rel=\"nofollow\">Discord</a>)]<br/>\nA lewd PVPVE dungeon dungeon crawler experience set in a tundra WL only, apply on discord https://discord.gg/fpCGYMt3RK.<br/>\nGAME STATUS: <b>IN LOBBY</b><br/>\nRound Time: <b>NE</b>]",
+    "address": "157.90.252.111:1338",
+    "topic_status": {
+      "Commskey disabled": [
+        ""
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.520024220",
+    "players": 0,
+    "name": "Civilization 13 (Official)",
+    "description": "Map: Nomads (Mediterranean) (159:21) | Gamemode: Classic (Stone Age Start)",
+    "status": "[<center><a href=\"https://civ13.com/discord\" rel=\"nofollow\" target=\"_blank\"><b>Civilization 13 (Official)</b></a></center>\n<br/>\n<img src=\"https://i.imgur.com/napac0L.png\"/><br/>\n<b>Map:</b> Nomads (Mediterranean) (159:21)<br/>\n<b>Gamemode:</b> Classic (Stone Age Start)]",
+    "address": "164.132.145.5:1715",
+    "topic_status": {
+      "version": [
+        "Civilization 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "game_id": [
+        "cD9-cVvv"
+      ],
+      "players": [
+        "0"
+      ],
+      "hub": [
+        "0"
+      ],
+      "admins": [
+        "0"
+      ],
+      "map_name": [
+        "Nomads (Mediterranean)"
+      ],
+      "map_age": [
+        "1873"
+      ],
+      "map_gamemode": [
+        "Classic (Stone Age Start)"
+      ],
+      "round_duration": [
+        "181:05"
+      ],
+      "round_duration_in_second": [
+        "6.51952e+07"
+      ],
+      "round_duration_in_ticks": [
+        "6.51952e+06"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.460821892",
+    "players": 1,
+    "name": "Sharty Station - |LRP|NANITES/MORE|NO NERFS|OPTIONAL INTENTS MODE| : respawn, hosted by LubeootNow with Nickacado Avacado as a playable antagonist! Lax Rules, Chill Jannies.",
+    "description": "Sharty Station - |LRP|NANITES/MORE|NO NERFS|OPTIONAL INTENTS MODE| : respawn, hosted by Lubeoot | Now with Nickacado Avacado as a playable antagonist! Lax Rules, Chill Jannies. | Roleplay: [ A24 Slowburn Atmospheric Driven Kino With",
+    "status": "[<b>Sharty Station - |LRP|NANITES/MORE|NO NERFS|OPTIONAL INTENTS MODE| : respawn, hosted by Lubeoot<br/>\nNow with Nickacado Avacado as a playable antagonist! Lax Rules, Chill Jannies.</b><br/>\nRoleplay: [<b>A24 Slowburn Atmospheric Driven Kino With</b>]",
+    "address": "146.19.215.138:8888",
+    "topic_status": {
+      "version": [
+        "MonkeStation 2.0"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "727"
+      ],
+      "players": [
+        "1"
+      ],
+      "revision": [
+        ""
+      ],
+      "revision_date": [
+        ""
+      ],
+      "hub": [
+        "1"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "MetaStation"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "6793"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "0.012675"
+      ],
+      "time_dilation_avg_slow": [
+        "0.00298652"
+      ],
+      "time_dilation_avg_fast": [
+        "0.018375"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ],
+      "shuttle_emergency_reason": [
+        ""
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.834356937",
+    "players": 0,
+    "name": "Iskhod Outpost",
+    "description": "18+ M/HRP, Frequent Events, Evolving Storyline, RuneChat enabled. | Map: Iskhod Colony | Storyteller: guide, respawn, AI allowed, hosted by drfarson",
+    "status": "[<b>Iskhod Outpost</b> \u2014 (<a href=\"https://discord.com/invite/e9dGKqJQTz\" rel=\"nofollow\">Discord</a>)18+ M/HRP, Frequent Events, Evolving Storyline, RuneChat enabled.<br/>\nMap: Iskhod Colony<br/>\nStoryteller: guide, respawn, AI allowed, hosted by <b>drfarson</b>]",
+    "address": "38.59.164.23:53865",
+    "topic_status": {
+      "version": [
+        "Sojourn"
+      ],
+      "storyteller": [
+        "guide"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "revision": [
+        "751acc22d3d8f0ca4d738e241f4258a0fb26c987"
+      ],
+      "revision_date": [
+        ""
+      ],
+      "round_id": [
+        "cEg-abDm"
+      ],
+      "players": [
+        "0"
+      ],
+      "shiptime": [
+        "09:12"
+      ],
+      "roundduration": [
+        "00:00"
+      ],
+      "admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1670420404",
+    "players": 0,
+    "name": "[US-Central] /tg/station Sybil",
+    "description": "respawn, hosted by /tg/station | Time: 04:47 | Map: MetaStation",
+    "status": "[<b>[US-Central] /tg/station Sybil</b> : respawn, hosted by <b>/tg/station</b><br/>\nTime: <b>04:47</b><br/>\nMap: <b>MetaStation</b>]",
+    "address": "51.79.52.10:1337",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "260259"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "b28794be95cd672486b87e73ed42a94f5f2f4488"
+      ],
+      "revision_date": [
+        "2026-02-26T00:00:27+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "sybil"
+      ],
+      "public_address": [
+        "sybil.tgstation13.org:1337"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "MetaStation"
+      ],
+      "security_level": [
+        "blue"
+      ],
+      "round_duration": [
+        "18276"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "899.315"
+      ],
+      "time_dilation_avg_slow": [
+        "1117.28"
+      ],
+      "time_dilation_avg_fast": [
+        "443.322"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1577584290",
+    "players": 0,
+    "name": "Tau Ceti Classic (RU) \u2014 NSS Exodus",
+    "description": "Roleplay: Medium | Round Duration: 03:51 | Recent changes",
+    "status": "[<a href=\"https://taucetistation.org\" rel=\"nofollow\"><b>Tau Ceti Classic (RU) \u2014 NSS Exodus</b></a><br/>\nRoleplay: <b>Medium</b><br/>\nRound Duration: <b>03:51</b><br/>\n<a href=\"https://changelog.taucetistation.org\" rel=\"nofollow\">Recent changes</a>]",
+    "address": "31.184.218.102:2506",
+    "topic_status": {
+      "version": [
+        "TauCetiStation"
+      ],
+      "mode": [
+        "Secret"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "players": [
+        "0"
+      ],
+      "stationtime": [
+        "15:55"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "roundduration": [
+        "03:51"
+      ],
+      "map_name": [
+        "Box Station"
+      ],
+      "popcap": [
+        "0"
+      ],
+      "round_id": [
+        "67694"
+      ],
+      "revision": [
+        "b2f89288b662f05ac2f8e23464621066020f5698"
+      ],
+      "admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.401661461",
+    "players": 0,
+    "name": "[RU] Celadon: SierraBay",
+    "description": "playing secret on NSV Sierra | MRP-HRP, Xenos Whitelisted | [ Wiki ] [ Discord",
+    "status": "[<b>[RU] Celadon: SierraBay</b> \u2014 playing <b>secret</b> on <b>NSV Sierra</b><br/>\nMRP-HRP, Xenos Whitelisted<br/>\n[<a href=\"https://sierra.celadon.pro\" rel=\"nofollow\">Wiki</a>] [<a href=\"https://discord.com/invite/rxsggTJzY3\" rel=\"nofollow\">Discord</a>]]",
+    "address": "45.93.200.145:1350",
+    "topic_status": {
+      "version": [
+        "Baystation"
+      ],
+      "mode": [
+        "secret"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "players": [
+        "0"
+      ],
+      "stationtime": [
+        "13:00"
+      ],
+      "roundduration": [
+        "00:00"
+      ],
+      "map": [
+        "NSV Sierra"
+      ],
+      "roundtime": [
+        "00:00"
+      ],
+      "ticker_state": [
+        "1"
+      ],
+      "admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.851930432",
+    "players": 0,
+    "name": "[RU]Coffe\u00e9 colony - Sojourn 13",
+    "description": "Nadezhda Colony ( Default ): mime, respawn, AI allowed, ~1 player",
+    "status": "[<b>[RU]Coffe? colony - Sojourn 13</b> \u2014 <b>Nadezhda Colony</b> (<a href=\"http://\" rel=\"nofollow\">Default</a>): mime, respawn, AI allowed, ~1 player]",
+    "address": "92.63.189.15:7980",
+    "topic_status": {
+      "version": [
+        "Sojourn"
+      ],
+      "storyteller": [
+        "mime"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "revision": [
+        "5824c5814c38657d36811294f86cbb7eb491c57d"
+      ],
+      "revision_date": [
+        "2026-02-26T19:05:56+00:00"
+      ],
+      "players": [
+        "0"
+      ],
+      "shiptime": [
+        "07:00"
+      ],
+      "roundduration": [
+        "00:00"
+      ],
+      "admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1874820193",
+    "players": 0,
+    "name": "Effigy \u2014 a /tg/station based anthro roleplay server",
+    "description": "] [ Discord ] | [where roleplay means creativity, not a giant rulebook] | [Map: FoxHoleStation",
+    "status": "[<a href=\"https://tgstation13.org\" rel=\"nofollow\"><b>Effigy \u2014 a /tg/station based anthro roleplay server</b></a>] [<a href=\"https://discord.gg/KFKTYT25tE\" rel=\"nofollow\">Discord</a>]<br/>\n[where roleplay means creativity, not a giant rulebook]<br/>\n[Map: <b>FoxHoleStation</b>]]",
+    "address": "51.79.52.10:7337",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "1283"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "8b3f83a2449fc9f8df2cbea817b665fd2b26b894"
+      ],
+      "revision_date": [
+        "2026-02-19T03:36:26+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "effigy"
+      ],
+      "public_address": [
+        "effigy.tgstation13.org:7337"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "1"
+      ],
+      "map_name": [
+        "FoxHoleStation"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "2231"
+      ],
+      "time_dilation_current": [
+        "1379.81"
+      ],
+      "time_dilation_avg": [
+        "1369.63"
+      ],
+      "time_dilation_avg_slow": [
+        "1374.27"
+      ],
+      "time_dilation_avg_fast": [
+        "1369.3"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "45"
+      ],
+      "extreme_popcap": [
+        "69"
+      ],
+      "popcap": [
+        "69"
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1651314801",
+    "players": 0,
+    "name": "Incitatus Interwar",
+    "description": "WW1 But Terrible Edition ( Discord ): warfare, ~1 player, hosted by Incitatus Team",
+    "status": "[<b>Incitatus Interwar</b> \u2014 <b>WW1 But Terrible Edition</b> (<a href=\"https://discord.gg/FVRctMD\" rel=\"nofollow\">Discord</a>): warfare, ~1 player, hosted by <b>Incitatus Team</b>]",
+    "address": "45.93.200.188:1947",
+    "topic_status": {
+      "version": [
+        "Interstation12"
+      ],
+      "mode": [
+        "warfare"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "players": [
+        "0"
+      ],
+      "stationtime": [
+        "05:24"
+      ],
+      "roundduration": [
+        "00:23"
+      ],
+      "map": [
+        "Warfare"
+      ],
+      "admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1190886693",
+    "players": 0,
+    "name": "Monke's Paw - Now with 200% Free Lag. Medium-Well Roleplay.",
+    "description": "hosted by TheDukeofOok | Beginner Friendly: Learn to play SS13! | Roleplay: [ Medium-Rare ] | Time: 01:04:24 | Map: Ice Box Station | Alert: Gree",
+    "status": "[<b>Monke's Paw - Now with 200% Free Lag. Medium-Well Roleplay.</b> : hosted by <b>TheDukeofOok</b><br/>\nBeginner Friendly: <b>Learn to play SS13!</b><br/>\nRoleplay: [<b>Medium-Rare</b>]<br/>\nTime: <b>01:04:24</b><br/>\nMap: <b>Ice Box Station</b><br/>\nAlert: <b>Gree</b>]",
+    "address": "104.194.9.21:3122",
+    "topic_status": {
+      "version": [
+        "MonkeStation 2.0"
+      ],
+      "respawn": [
+        "0"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "15185"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "99e14377508818db707251dce63959de58af2e7a"
+      ],
+      "revision_date": [
+        "2026-02-08T20:30:08+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Ice Box Station"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "5512"
+      ],
+      "time_dilation_current": [
+        "18370.7"
+      ],
+      "time_dilation_avg": [
+        "3862.54"
+      ],
+      "time_dilation_avg_slow": [
+        "719.225"
+      ],
+      "time_dilation_avg_fast": [
+        "10000.4"
+      ],
+      "soft_popcap": [
+        "50"
+      ],
+      "hard_popcap": [
+        "80"
+      ],
+      "extreme_popcap": [
+        "70"
+      ],
+      "popcap": [
+        "80"
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "called"
+      ],
+      "shuttle_timer": [
+        "1150"
+      ],
+      "shuttle_emergency_reason": [
+        ""
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.173667919",
+    "players": 0,
+    "name": "[SS220][RU] BandaTroopers (CM-PVE)",
+    "description": "Hosted by: SS220 | Round time: 00:43 | An RP server focused on a tight knit platoon fighting xenos! | Shoot the shit *and* shoot shit.",
+    "status": "[<a href=\"https://discord.com/invite/ss220\" rel=\"nofollow\"><b>[SS220][RU] BandaTroopers (CM-PVE)</b></a><br/>\nHosted by: <b>SS220</b><br/>\nRound time: <b>00:43</b><br/>\nAn RP server focused on a tight knit platoon fighting xenos!<br/>\nShoot the shit *and* shoot shit.]",
+    "address": "116.202.156.155:5679",
+    "topic_status": {
+      "mode": "Distress Signal: Lowpop",
+      "vote": 0,
+      "ai": 1,
+      "host": null,
+      "round_id": 118,
+      "players": 0,
+      "revision": "daf232733aa3afd2876ce9f64c054f71f885a502",
+      "revision_date": "2026-02-25T14:55:46 00:00",
+      "admins": 0,
+      "gamestate": 1,
+      "map_name": "Bosenmori Basho",
+      "security_level": "green",
+      "round_duration": 26099,
+      "time_dilation_current": 58198.5,
+      "time_dilation_avg": 16964.7,
+      "time_dilation_avg_slow": 9248.36,
+      "time_dilation_avg_fast": 37386.7,
+      "mcpu": 0.0222325,
+      "cpu": 0.700226
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.927771814",
+    "players": 0,
+    "name": "Apocrypha [18+ World of Darkness] \u2014 Apply on Discord!",
+    "description": "Chill World of Darkness RP. Age Vetting required. | Hosted by MCI.",
+    "status": "[<a href=\"https://discord.gg/invite/cq3gqaCTFG\" rel=\"nofollow\"><b>Apocrypha [18+ World of Darkness] \u2014 Apply on Discord!</b></a><br/>\nChill World of Darkness RP. Age Vetting required.<br/>\nHosted by <b>MCI.</b>]",
+    "address": "37.27.129.146:1337",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "1129"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "df819d777ea5c840acf20c06f62cf73b5620bfb9"
+      ],
+      "revision_date": [
+        "2026-02-20T08:55:51+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "1"
+      ],
+      "map_name": [
+        "Special Francisco"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "1851"
+      ],
+      "time_dilation_current": [
+        "302"
+      ],
+      "time_dilation_avg": [
+        "24844.1"
+      ],
+      "time_dilation_avg_slow": [
+        "13588.1"
+      ],
+      "time_dilation_avg_fast": [
+        "28646.8"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1922391578",
+    "players": 0,
+    "name": "Adventure Mode",
+    "description": "Sleepy Caves : hosted by Lir",
+    "status": "[<a href=\"https://discord.gg/rUcDetMctF\" rel=\"nofollow\"><b>Adventure Mode</b></a> \u2014 <b>Sleepy Caves</b>: hosted by <b>Lir</b>]",
+    "address": "65.108.8.160:51078",
+    "topic_status": {
+      "version": [
+        "DwarfFortress"
+      ],
+      "host": [
+        ""
+      ],
+      "players": [
+        ""
+      ],
+      "stationtime": [
+        "14:00"
+      ],
+      "gamestate": [
+        "1"
+      ],
+      "roundduration": [
+        "00:00"
+      ],
+      "map_name": [
+        "Caves"
+      ],
+      "popcap": [
+        "0"
+      ],
+      "round_id": [
+        "231"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.74068681",
+    "players": 0,
+    "name": "[TG] POSTMETA [RU, LRP]",
+    "description": "MASSMETA REDUX, ~1984 disabled, ~fun enabled & /n/TTS is ON. | : respawn, hosted by pokelecarp | Time: 05:18 | Map: Delta Station",
+    "status": "[<b>[TG] POSTMETA [RU, LRP]</b> (<a href=\"https://discord.gg/2VwaWtZcRh\" rel=\"nofollow\">Discord</a>)]<br/>\nMASSMETA REDUX, ~1984 disabled, ~fun enabled &amp; /n/TTS is ON.<br/>\n: respawn, hosted by <b>pokelecarp</b><br/>\nTime: <b>05:18</b><br/>\nMap: <b>Delta Station</b>]",
+    "address": "178.250.156.202:13131",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "2981"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "6b89dd047dd64abeba98d806c96af0a8bbbb196a"
+      ],
+      "revision_date": [
+        "2026-02-23T07:51:45+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        ""
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Delta Station"
+      ],
+      "security_level": [
+        "blue"
+      ],
+      "round_duration": [
+        "19329"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "1.90799"
+      ],
+      "time_dilation_avg_slow": [
+        "1.70107"
+      ],
+      "time_dilation_avg_fast": [
+        "1.36286"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1261813112",
+    "players": 0,
+    "name": "[US-Central] [MRP] /tg/station Manuel",
+    "description": "hosted by /tg/station | Time: 03:37 | Map: MetaStation",
+    "status": "[<b>[US-Central] [MRP] /tg/station Manuel</b> : hosted by <b>/tg/station</b><br/>\nTime: <b>03:37</b><br/>\nMap: <b>MetaStation</b>]",
+    "address": "51.79.52.10:1447",
+    "topic_status": null
+  },
+  {
+    "connection_url": "byond://BYOND.world.585529660",
+    "players": 0,
+    "name": "ROUGE-SURVIVAL 24/7 EXPLORE & BUILD",
+    "description": "Medieval Fantasy Roleplay, Without ERP! | [ GAME STATUS: PLAYING",
+    "status": "[<center><a href=\"https://discord.gg/D57nnyARhr\" rel=\"nofollow\"><big><b>ROUGE-SURVIVAL 24/7 EXPLORE &amp; BUILD</b></big></a><br/>\n<b>Medieval Fantasy Roleplay, Without ERP!</b><br/>\n[<b>GAME STATUS:</b> PLAYING</center>]",
+    "address": "64.20.37.50:1545",
+    "topic_status": {
+      "version": [
+        "VANDERLIN"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "Spider113-12.09.22"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "e64c74a25848e8a08178c9a5d454b522591c4397"
+      ],
+      "revision_date": [
+        ""
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "The Mountain"
+      ],
+      "round_duration": [
+        "2898006"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "5.4028"
+      ],
+      "time_dilation_avg_slow": [
+        "2.50898"
+      ],
+      "time_dilation_avg_fast": [
+        "3.92316"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "100"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        "100"
+      ],
+      "timeofday": [
+        "night"
+      ],
+      "dayspassed": [
+        "6"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1046319048",
+    "players": 0,
+    "name": "ApocryphaXIII",
+    "description": "respawn, hosted by Mira | Map: Special Francisco",
+    "status": "[<b>ApocryphaXIII</b> : respawn, hosted by <b>Mira</b><br/>\nMap: <b>Special Francisco</b>]",
+    "address": "37.27.129.146:1338",
+    "topic_status": {
+      "version": [
+        "DarkPack: Second City"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "19"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "83cd7c3afc3d698096ed2638bcd67ee31a41f2e6"
+      ],
+      "revision_date": [
+        "2026-02-24T22:35:27+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        ""
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "1"
+      ],
+      "map_name": [
+        "Special Francisco"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "49087"
+      ],
+      "time_dilation_current": [
+        "60005"
+      ],
+      "time_dilation_avg": [
+        "17980"
+      ],
+      "time_dilation_avg_slow": [
+        "23163.9"
+      ],
+      "time_dilation_avg_fast": [
+        "33159.8"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1603155797",
+    "players": 0,
+    "name": "Sandstorm Station 13 - Zybourne Fist Environment 83",
+    "description": "] ( Sandstorm ) (18+) | Extended with no random events. | [Box Station, green alert, 1 playing",
+    "status": "[<b>Sandstorm Station 13 - Zybourne Fist Environment 83</b>] (<a href=\"https://discord.gg/quXTqa6cp9\" rel=\"nofollow\">Sandstorm</a>) (18+)<br/>\nExtended with no random events.<br/>\n[Box Station, green alert, 1 playing]",
+    "address": "78.46.176.30:8100",
+    "topic_status": {
+      "version": [
+        "/tg/ Station 13"
+      ],
+      "mode": [
+        "hidden"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "359"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "86284299494ff37917127af39bcb1808a6bab052"
+      ],
+      "revision_date": [
+        "2026-02-17T21:24:25+00:00"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Box Station"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "50987"
+      ],
+      "time_dilation_current": [
+        "30565"
+      ],
+      "time_dilation_avg": [
+        "17463.9"
+      ],
+      "time_dilation_avg_slow": [
+        "5211.03"
+      ],
+      "time_dilation_avg_fast": [
+        "27850.4"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1212120082",
+    "players": 0,
+    "name": "Solaris Ridge [Apply on Discord!]",
+    "description": "(18+) A new spin on high-fantasy medieval roleplay! | GAME STATUS: IN LOBBY | Round Time: NEW ROUND STARTING | Players: 0",
+    "status": "[<b>Solaris Ridge [Apply on Discord!]</b> \u2014 (<a href=\"https://discord.gg/novasector\" rel=\"nofollow\">Discord</a>)]<br/>\n(18+) A new spin on high-fantasy medieval roleplay!<br/>\nGAME STATUS: <b>IN LOBBY</b><br/>\nRound Time: <b>NEW ROUND STARTING</b><br/>\nPlayers: <b>0</b>]",
+    "address": "172.93.105.88:22075",
+    "topic_status": {
+      "version": [
+        "/tg/ Station 13"
+      ],
+      "mode": [
+        "roguemode"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "1901"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "525a6834927c354b49d900c7bcf7d898131c0c11"
+      ],
+      "revision_date": [
+        ""
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Dun World"
+      ],
+      "round_duration": [
+        "8297"
+      ],
+      "time_dilation_current": [
+        "8"
+      ],
+      "time_dilation_avg": [
+        "9.88652"
+      ],
+      "time_dilation_avg_slow": [
+        "9.63433"
+      ],
+      "time_dilation_avg_fast": [
+        "10.109"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.2066354922",
+    "players": 0,
+    "name": "[RU] SS220 Paradise Extended eXperimental",
+    "description": "NSS Cyberiad (ParaCode) | Modified ParaCode, full russian support, EXTENDED ONLY | 28:36, Green | MedRP, all species, Wiki , respawn",
+    "status": "[<b>[RU] SS220 Paradise Extended eXperimental</b> \u2014 <b>NSS Cyberiad</b> (ParaCode)<br/>\nModified ParaCode, full russian support, EXTENDED ONLY<br/>\n28:36, Green<br/>\nMedRP, all species, <a href=\"http://rv666.asuscomm.com/wiki/index.php\" rel=\"nofollow\">Wiki</a>, respawn]<br/>\n            Hosted by <a href=\"https://www.byond.com/members/RV666\" user_ckey=\"rv666\">RV666</a>",
+    "address": "185.183.12.76:7724",
+    "topic_status": {
+      "version": null,
+      "mode": "extended",
+      "respawn": 1,
+      "enter": 1,
+      "vote": 0,
+      "ai": 1,
+      "host": "RV666",
+      "players": 0,
+      "roundtime": "29:23:15",
+      "stationtime": "05:12:49",
+      "oldstationtime": "41:12",
+      "listed": "Public",
+      "admins": 0,
+      "map_name": "Cyberiad"
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1216610303",
+    "players": 0,
+    "name": "Urist McStation",
+    "description": "Beginner friendly MRP set on a spaceship; playing extended on ?ICS Nerva with 1 of 1 alive | [ Discord",
+    "status": "[<b>Urist McStation</b> \u2014 Beginner friendly MRP set on a spaceship; playing <b>extended</b> on <b>?ICS Nerva</b> with 1 of 1 alive<br/>\n[<a href=\"https://discord.gg/0oRsdvoS1DDd5Rv0\" rel=\"nofollow\">Discord</a>]]",
+    "address": "192.223.30.108:58137",
+    "topic_status": {
+      "version": [
+        "Baystation"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        "Guest-2871851705"
+      ],
+      "players": [
+        "0"
+      ],
+      "stationtime": [
+        "20:09"
+      ],
+      "roundduration": [
+        "36:52"
+      ],
+      "map": [
+        "ICS Nerva"
+      ],
+      "admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1883513735",
+    "players": 0,
+    "name": "byond://BYOND.world.1883513735",
+    "description": "Yawn Wider Station \u2014 Cryogaia ( Discord ): 18+, extended, respawn, persistence enabled, persistence mapload enabled, AI allowed, ~1 player, hosted by",
+    "status": "[<span class=\"bold\">Yawn Wider Station</span> \u2014 <span class=\"bold\">Cryogaia</span> (<a href=\"https://discord.gg/0uKK2Yrhgwvc4VSR\" rel=\"nofollow\">Discord</a>): 18+, extended, respawn, persistence enabled, persistence mapload enabled, AI allowed, ~1 player, hosted by]",
+    "address": "96.20.137.183:53909",
+    "topic_status": {
+      "version": [
+        "VOREStation"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "persistance": [
+        "0"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        "Guest-1985464061"
+      ],
+      "players": [
+        "0"
+      ],
+      "stationtime": [
+        "05:26"
+      ],
+      "roundduration": [
+        "192:23"
+      ],
+      "map": [
+        "NSB Cryogaia"
+      ],
+      "admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1292754294",
+    "players": 0,
+    "name": "CRXB-Industries Experimental",
+    "description": "Shiptest ( IRC ) ( Github ) | 515 + 516 Compatible. Round Time: 3 Days, 04:15:58:",
+    "status": "[<b>CRXB-Industries Experimental</b> \u2014 <b>Shiptest</b> (<a href=\"https://crxb.cc/irc?channel=#shiptest\" rel=\"nofollow\">IRC</a>) (<a href=\"https://github.com/craftxbox/Shiptest\" rel=\"nofollow\">Github</a>)<br/>\n515 + 516 Compatible. <b>Round Time:</b>&amp;nbsp;3 Days, 04:15:58:]",
+    "address": "174.117.104.37:6666",
+    "topic_status": {
+      "version": [
+        "Shiptest SS13"
+      ],
+      "mode": [
+        "secret"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        "Guest-4169755416"
+      ],
+      "round_id": [
+        "430"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "13fa5cbd767ab4f7109297274ecd3a6b1a13874e"
+      ],
+      "revision_date": [
+        ""
+      ],
+      "hub": [
+        "1"
+      ],
+      "admins": [
+        "0"
+      ],
+      "mentors": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "security_level": [
+        "blue"
+      ],
+      "round_duration": [
+        "2282"
+      ],
+      "time_dilation_current": [
+        "21985"
+      ],
+      "time_dilation_avg": [
+        "12159.8"
+      ],
+      "time_dilation_avg_slow": [
+        "12156"
+      ],
+      "time_dilation_avg_fast": [
+        "9461.79"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1421604539",
+    "players": 0,
+    "name": "Citadel Station 13 - Roleplay",
+    "description": "] ( Citadel ) (18+) | Slice-of-life 18+ roleplay in a vibrant galaxy! | [Atlas, green alert, 2 players",
+    "status": "[<b>Citadel Station 13 - Roleplay</b>] (<a href=\"https://citadel-station.net\" rel=\"nofollow\">Citadel</a>) (18+)<br/>\n<a href=\"https://discord.gg/citadelstation\" rel=\"nofollow\">Slice-of-life 18+ roleplay in a vibrant galaxy!</a><br/>\n[Atlas, green alert, 2 players]",
+    "address": "15.235.106.6:44150",
+    "topic_status": {
+      "version": [
+        "Citadel Station RP"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "6587"
+      ],
+      "players": [
+        "1"
+      ],
+      "revision": [
+        "475c5a33294df8fbba7fbb3ea1700185ed78d369"
+      ],
+      "revision_date": [
+        "2026-02-24T09:33:47+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "admins": [
+        "1"
+      ],
+      "gamestate": [
+        "2"
+      ],
+      "map_name": [
+        "World - Rift"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "0"
+      ],
+      "stationtime": [
+        "12:33:31"
+      ],
+      "roundduration": [
+        "00:00"
+      ],
+      "time_dilation_current": [
+        "0.655704"
+      ],
+      "time_dilation_avg": [
+        "0.728012"
+      ],
+      "time_dilation_avg_slow": [
+        "0.644353"
+      ],
+      "time_dilation_avg_fast": [
+        "0.717006"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.230266384",
+    "players": 1,
+    "name": "V.E.N.U.S",
+    "description": "NSFW: 18+ lewd MRP & PvE above Venus. Auto-imports your characters from other servers! Modded SPLURT base, evolving events. | [MetaStation, ~1 player",
+    "status": "[<b>V.E.N.U.S</b> \u2014 (<a href=\"http://dsc.gg/venussy\" rel=\"nofollow\">Discord</a>)]<br/>\n<a href=\"dsc.gg/venussy\" rel=\"nofollow\">NSFW: 18+ lewd MRP &amp; PvE above Venus. Auto-imports your characters from other servers! Modded SPLURT base, evolving events.</a><br/>\n[MetaStation, ~1 player]",
+    "address": "138.201.207.245:7777",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "1903"
+      ],
+      "players": [
+        "1"
+      ],
+      "revision": [
+        "4f86d32bd960adcf69b3ecd72e57754f334dd7f6"
+      ],
+      "revision_date": [
+        "2026-02-25T22:50:12+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "venusstation"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "MetaStation"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "9121"
+      ],
+      "time_dilation_current": [
+        "1"
+      ],
+      "time_dilation_avg": [
+        "0.101339"
+      ],
+      "time_dilation_avg_slow": [
+        "0.10505"
+      ],
+      "time_dilation_avg_fast": [
+        "0.306267"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1470482623",
+    "players": 0,
+    "name": "Lumos Station 13",
+    "description": "18+ Server - Lumos 4: Same as it ever was. | [MetaStation, ~1 player",
+    "status": "[<b>Lumos Station 13</b> \u2014 (<a href=\"https://discord.gg/3B5fqxcTAF\" rel=\"nofollow\">Discord</a>)]<br/>\n18+ Server - Lumos 4: Same as it ever was.<br/>\n[MetaStation, ~1 player]",
+    "address": "45.63.60.196:1337",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        "Guest-1391197581"
+      ],
+      "round_id": [
+        "414"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "e5614a4b2213e79c12ce8f18801280a750e3f8b8"
+      ],
+      "revision_date": [
+        "2026-02-26T02:12:55+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        "lumos"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "MetaStation"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "5462"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "0.0217031"
+      ],
+      "time_dilation_avg_slow": [
+        "0.0250995"
+      ],
+      "time_dilation_avg_fast": [
+        "0.0129132"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.565593625",
+    "players": 0,
+    "name": "Lobotomy Corporation 13",
+    "description": "] \u2014 It's management time! ( Discord ) | Map: [Facility A-098 ALPHA ] | Roleplay: [ Medium",
+    "status": "[<b>Lobotomy Corporation 13</b>] \u2014 <b>It's management time!</b> (<a href=\"https://discord.gg/twywyWD8Uc\" rel=\"nofollow\">Discord</a>)",
+    "address": "95.217.91.188:1337",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "mode": [
+        "classic"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "15207"
+      ],
+      "players": [
+        "1"
+      ],
+      "revision": [
+        "baa750c62cff29a8d31f64a91cb277b84ffe9efa"
+      ],
+      "revision_date": [
+        "2026-02-25T21:36:56+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Facility A-098 ALPHA"
+      ],
+      "security_level": [
+        "no warning"
+      ],
+      "round_duration": [
+        "15766"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "0.272977"
+      ],
+      "time_dilation_avg_slow": [
+        "0.223526"
+      ],
+      "time_dilation_avg_fast": [
+        "0.301559"
+      ],
+      "soft_popcap": [
+        "35"
+      ],
+      "hard_popcap": [
+        "100"
+      ],
+      "extreme_popcap": [
+        "100"
+      ],
+      "popcap": [
+        "100"
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1605451489",
+    "players": 0,
+    "name": "AuStation",
+    "description": "Festive Trade Post One ( Discord | Website ): hosted by Mcterra | Time: 08:20 | Alert: Blue | Players: 1/200",
+    "status": "[<b>AuStation</b> \u2014 <b>Festive Trade Post One</b> (<a href=\"https://discord.gg/ZTGQAqB\" rel=\"nofollow\">Discord</a>|<a href=\"http://beestation13.com\" rel=\"nofollow\">Website</a>): hosted by <b>Mcterra</b><br/>\nTime: <b>08:20</b><br/>\nAlert: <b>Blue</b><br/>\nPlayers: <b>1/200</b>]",
+    "address": "51.161.199.66:2337",
+    "topic_status": {
+      "statuscode": 400,
+      "response": "Bad Request - Invalid JSON format"
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.933572295",
+    "players": 0,
+    "name": "NSV 13 | Official | MRP | 98% Free Lag | Spaceship Combat Server",
+    "description": "NSV Luxanna ( Discord | Website )) | Time: 00:26 | Alert: Condition",
+    "status": "[<b>NSV 13 | Official | MRP | 98% Free Lag | Spaceship Combat Server</b> \u2014 <b>NSV Luxanna</b>(<a href=\"https://nsv.beestation13.com/discord\" rel=\"nofollow\">Discord</a>|<a href=\"http://nsv.beestation13.com\" rel=\"nofollow\">Website</a>))<br/>\nTime: <b>00:26</b><br/>\nAlert: <b>Condition</b>]",
+    "address": "78.47.208.70:1337",
+    "topic_status": {
+      "statuscode": 429,
+      "response": "Rate limited"
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.347475641",
+    "players": 0,
+    "name": "Coolstation LLJK 2",
+    "description": "The vintage SS13 experience. Spicy! ( Discord ) | Smells: Great ! | Map: GEHENNA | Mode: mixed",
+    "status": "[<b><a href=\"https://coolstation.space\" rel=\"nofollow\">Coolstation LLJK 2</a></b> \u2014 The vintage SS13 experience. Spicy! (<a href=\"https://discord.gg/Xh3yfs8KGn\" rel=\"nofollow\">Discord</a>)<br/>\nSmells: <b>Great</b>!<br/>\nMap: <b>GEHENNA</b><br/>\nMode: <b>mixed</b>]",
+    "address": "188.245.253.9:8085",
+    "topic_status": {
+      "version": [
+        "Coolstation 13 (r1)"
+      ],
+      "mode": [
+        "mixed"
+      ],
+      "respawn": [
+        "0"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "players": [
+        "0"
+      ],
+      "station_name": [
+        "Mining Repository Theta"
+      ],
+      "shuttle_time": [
+        "330"
+      ],
+      "elapsed": [
+        "pre"
+      ],
+      "map_name": [
+        "Gehenna Colony"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.88684534",
+    "players": 0,
+    "name": "Goonstation 1 Classic: Heisenbee",
+    "description": "The classic SS13 experience. \u2014 ( Discord ) | Starting: 167 | Map: Kondaru",
+    "status": "[<b><a href=\"https://goonhub.com\" rel=\"nofollow\">Goonstation 1 Classic: Heisenbee</a></b> \u2014 The classic SS13 experience. \u2014 (<a href=\"http://bit.ly/gndscd\" rel=\"nofollow\">Discord</a>)<br/>\nStarting: <b>167</b><br/>\nMap: <b>Kondaru</b><br/>]",
+    "address": "15.235.86.196:26100",
+    "topic_status": {
+      "version": [
+        "Goonstation 13 (recbaf5801d407c0a9f72445a60b30989b381cea7)"
+      ],
+      "host": [
+        ""
+      ],
+      "gamestate": [
+        "7"
+      ],
+      "respawn": [
+        "0"
+      ],
+      "enter": [
+        "1"
+      ],
+      "round_id": [
+        "223172"
+      ],
+      "ai": [
+        "1"
+      ],
+      "mode": [
+        "secret"
+      ],
+      "round_duration": [
+        "3469"
+      ],
+      "shuttle_online": [
+        "0"
+      ],
+      "shuttle_direction": [
+        "1"
+      ],
+      "shuttle_location": [
+        "0"
+      ],
+      "shuttle_timer": [
+        "360"
+      ],
+      "station_name": [
+        "Regina Laboratory Sixty-Nine"
+      ],
+      "map_name": [
+        "Kondaru"
+      ],
+      "map_id": [
+        "KONDARU"
+      ],
+      "players": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1417977982",
+    "players": 0,
+    "name": "Lobotomy Corporation 13 - Official",
+    "description": "] \u2014 It's management time! ( Discord ) | Map: [Facility A-098 ALPHA ] | [ Gameplay Focus",
+    "status": "[<b>Lobotomy Corporation 13 - Official</b>] \u2014 <b>It's management time!</b> (<a href=\"https://discord.gg/UmfQBAuFbj\" rel=\"nofollow\">Discord</a>)",
+    "address": "91.99.62.34:1337",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "mode": [
+        "classic"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "11219"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "26f49417941995caa1032341ab751b683ff93de9"
+      ],
+      "revision_date": [
+        "2026-02-21T01:01:29+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Facility A-098 ALPHA"
+      ],
+      "security_level": [
+        "second trumpet"
+      ],
+      "round_duration": [
+        "1285"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "0.00790298"
+      ],
+      "time_dilation_avg_slow": [
+        "0.0293919"
+      ],
+      "time_dilation_avg_fast": [
+        "0.0049779"
+      ],
+      "soft_popcap": [
+        "25"
+      ],
+      "hard_popcap": [
+        "40"
+      ],
+      "extreme_popcap": [
+        "50"
+      ],
+      "popcap": [
+        "50"
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.642572161",
+    "players": 0,
+    "name": "LYNDVHAR [18+]",
+    "description": "Enter the Realm of Beowricke | GAME STATUS: PLAYING | Round Time: 01:23 | Player: 1",
+    "status": "[<b>LYNDVHAR [18+]</b> \u2014 (<a href=\"https://discord.gg/B8zPd2SEx3\" rel=\"nofollow\">Discord</a>)]<br/>\nEnter the Realm of Beowricke<br/>\nGAME STATUS: <b>PLAYING</b><br/>\nRound Time: <b>01:23</b><br/>\nPlayer: <b>1</b>]",
+    "address": "51.161.0.168:5829",
+    "topic_status": {
+      "version": [
+        "/tg/ Station 13"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "2036"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "d9a3e250bebad96d0c80eace9b83f113935424df"
+      ],
+      "revision_date": [
+        ""
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Port of Lyndvhar"
+      ],
+      "round_duration": [
+        "6066"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "0.639249"
+      ],
+      "time_dilation_avg_slow": [
+        "0.768847"
+      ],
+      "time_dilation_avg_fast": [
+        "0.326899"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "100"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        "100"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1852758890",
+    "players": 0,
+    "name": "Andromeda-13",
+    "description": "CEPBEP PYCCKOGO HAPODA | [MetaStation, ~1 player",
+    "status": "[<b>Andromeda-13</b> \u2014 (<a href=\"https://discord.gg/NxTZeUPtRf\" rel=\"nofollow\">Discord</a>)]<br/>\nCEPBEP PYCCKOGO HAPODA<br/>\n[MetaStation, ~1 player]",
+    "address": "5.42.211.88:1337",
+    "topic_status": {
+      "version": [
+        "/tg/Station 13"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        "Guest-2178213890"
+      ],
+      "round_id": [
+        "11"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "a4226d3178c9e27e58a5e7e4c3f7cc0df8f331db"
+      ],
+      "revision_date": [
+        "2026-01-05T02:13:25+00:00"
+      ],
+      "hub": [
+        "1"
+      ],
+      "identifier": [
+        ""
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "MetaStation"
+      ],
+      "security_level": [
+        "green"
+      ],
+      "round_duration": [
+        "50889"
+      ],
+      "time_dilation_current": [
+        "100088"
+      ],
+      "time_dilation_avg": [
+        "23602"
+      ],
+      "time_dilation_avg_slow": [
+        "5585.35"
+      ],
+      "time_dilation_avg_fast": [
+        "58841.6"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "0"
+      ],
+      "extreme_popcap": [
+        "0"
+      ],
+      "popcap": [
+        ""
+      ],
+      "bunkered": [
+        "0"
+      ],
+      "interviews": [
+        "0"
+      ],
+      "shuttle_mode": [
+        "idle"
+      ],
+      "shuttle_timer": [
+        "10"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1080199914",
+    "players": 0,
+    "name": "[RU] SS1984 SierraBay",
+    "description": "playing secret on NSV Sierra | MRP-HRP, Xenos Whitelisted | [ Wiki ] [ Discord",
+    "status": "[<b>[RU] SS1984 SierraBay</b> \u2014 playing <b>secret</b> on <b>NSV Sierra</b><br/>\nMRP-HRP, Xenos Whitelisted<br/>\n[<a href=\"https://sierra.ss220.space\" rel=\"nofollow\">Wiki</a>] [<a href=\"https://discord.ss220.space\" rel=\"nofollow\">Discord</a>]]",
+    "address": "92.63.189.6:7733",
+    "topic_status": {
+      "version": [
+        "Baystation"
+      ],
+      "mode": [
+        "secret"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "players": [
+        "0"
+      ],
+      "stationtime": [
+        "03:56"
+      ],
+      "roundduration": [
+        "122:18"
+      ],
+      "map": [
+        "NSV Sierra"
+      ],
+      "roundtime": [
+        "122:18"
+      ],
+      "ticker_state": [
+        "3"
+      ],
+      "admins": [
+        "0"
+      ]
+    }
+  },
+  {
+    "connection_url": "byond://BYOND.world.1620504643",
+    "players": 0,
+    "name": "Ratwood Keep 2.0 Secondary",
+    "description": "Completely rebased! 18+ anthro-friendly medieval RP with spell-slinging! | GAME STATUS: PLAYING | Round Time: 00:52 | Player: 1",
+    "status": "[<b>Ratwood Keep 2.0 Secondary</b> \u2014 (<a href=\"https://discord.gg/Q9eDp9srmX\" rel=\"nofollow\">Discord</a>)]<br/>\nCompletely rebased! 18+ anthro-friendly medieval RP with spell-slinging!<br/>\nGAME STATUS: <b>PLAYING</b><br/>\nRound Time: <b>00:52</b><br/>\nPlayer: <b>1</b>]",
+    "address": "104.243.45.106:22099",
+    "topic_status": {
+      "version": [
+        "/tg/ Station 13"
+      ],
+      "mode": [
+        "extended"
+      ],
+      "respawn": [
+        "1"
+      ],
+      "enter": [
+        "1"
+      ],
+      "vote": [
+        "0"
+      ],
+      "ai": [
+        "1"
+      ],
+      "host": [
+        ""
+      ],
+      "round_id": [
+        "1566"
+      ],
+      "players": [
+        "0"
+      ],
+      "revision": [
+        "26508019561e428f29432ecc1e466caee75ebd02"
+      ],
+      "revision_date": [
+        ""
+      ],
+      "admins": [
+        "0"
+      ],
+      "gamestate": [
+        "3"
+      ],
+      "map_name": [
+        "Rockhill"
+      ],
+      "round_duration": [
+        "3427"
+      ],
+      "time_dilation_current": [
+        "0"
+      ],
+      "time_dilation_avg": [
+        "1.03024"
+      ],
+      "time_dilation_avg_slow": [
+        "1.18347"
+      ],
+      "time_dilation_avg_fast": [
+        "1.09932"
+      ],
+      "soft_popcap": [
+        "0"
+      ],
+      "hard_popcap": [
+        "80"
+      ],
+      "extreme_popcap": [
+        "120"
+      ],
+      "popcap": [
+        "120"
+      ]
+    }
+  }
+]
