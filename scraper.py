@@ -243,8 +243,12 @@ def init_db(conn):
                 status TEXT,
                 topic_status JSONB,
                 players INTEGER DEFAULT 0,
+                online BOOLEAN DEFAULT FALSE,
                 updated_at TIMESTAMP DEFAULT NOW()
             )
+        """)
+        cur.execute("""
+            ALTER TABLE servers ADD COLUMN IF NOT EXISTS online BOOLEAN DEFAULT FALSE
         """)
         cur.execute("""
             CREATE TABLE IF NOT EXISTS player_history (
@@ -269,6 +273,13 @@ def extract_world_id(url):
     match = re.search(r'BYOND\.world\.(\d+)', url)
     return int(match.group(1)) if match else None
 
+
+def mark_all_offline(conn):
+    with conn.cursor() as cur:
+        cur.execute("UPDATE servers SET online = FALSE")
+    conn.commit()
+
+
 def save_to_db(conn, servers):
     from psycopg2.extras import Json
 
@@ -285,8 +296,8 @@ def save_to_db(conn, servers):
                 topic_status = None
 
             cur.execute("""
-                INSERT INTO servers (address, world_id, name, description, status, topic_status, players, updated_at)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, NOW())
+                INSERT INTO servers (address, world_id, name, description, status, topic_status, players, online, updated_at)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, TRUE, NOW())
                 ON CONFLICT (address) DO UPDATE SET
                     world_id = EXCLUDED.world_id,
                     name = EXCLUDED.name,
@@ -294,6 +305,7 @@ def save_to_db(conn, servers):
                     status = EXCLUDED.status,
                     topic_status = EXCLUDED.topic_status,
                     players = EXCLUDED.players,
+                    online = TRUE,
                     updated_at = NOW()
             """, (address, world_id, server["name"], server["description"], server["status"], Json(topic_status) if topic_status else None, server["players"]))
 
@@ -461,6 +473,7 @@ def run_once():
     import psycopg2
     conn = psycopg2.connect(DATABASE_URL)
     init_db(conn)
+    mark_all_offline(conn)
     save_to_db(conn, servers)
     conn.close()
 

@@ -21,6 +21,7 @@ struct Server {
     status: Option<String>,
     topic_status: Option<serde_json::Value>,
     players: i32,
+    online: bool,
     updated_at: NaiveDateTime,
 }
 
@@ -101,7 +102,7 @@ impl<T: Serialize> IntoResponse for RawJson<T> {
 
 async fn get_servers(State(pool): State<PgPool>) -> Result<RawJson<Vec<Server>>, StatusCode> {
     let servers = sqlx::query_as::<_, Server>(
-        "SELECT address, world_id, name, description, status, topic_status, players, updated_at FROM servers ORDER BY players DESC",
+        "SELECT address, world_id, name, description, status, topic_status, players, online, updated_at FROM servers ORDER BY online DESC, players DESC",
     )
     .fetch_all(&pool)
     .await
@@ -116,7 +117,7 @@ async fn get_server(
 ) -> Result<RawJson<Server>, StatusCode> {
     let address = format!("{}:{}", ip, port);
     let server = sqlx::query_as::<_, Server>(
-        "SELECT address, world_id, name, description, status, topic_status, players, updated_at FROM servers WHERE address = $1",
+        "SELECT address, world_id, name, description, status, topic_status, players, online, updated_at FROM servers WHERE address = $1",
     )
     .bind(&address)
     .fetch_optional(&pool)
