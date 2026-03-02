@@ -283,7 +283,7 @@ async fn get_server_stats(
             }
             "month" => {
                 sqlx::query_as::<_, BucketedHistory>(
-                    "SELECT date_trunc('hour', recorded_at) +
+                    "SELECT date_trunc('day', recorded_at) +
                             INTERVAL '6 hours' * (EXTRACT(HOUR FROM recorded_at)::int / 6) as bucket,
                             AVG(players)::float8 as avg
                      FROM player_history WHERE address = $1 AND recorded_at > $2
