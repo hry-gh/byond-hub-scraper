@@ -465,7 +465,7 @@ async fn get_global_stats(
             "month" => {
                 sqlx::query_as::<_, BucketedHistory>(
                     "SELECT bucket, AVG(total)::float8 as avg FROM (
-                        SELECT date_trunc('hour', recorded_at) +
+                        SELECT date_trunc('day', recorded_at) +
                                INTERVAL '6 hours' * (EXTRACT(HOUR FROM recorded_at)::int / 6) as bucket,
                                SUM(players) as total
                         FROM player_history WHERE recorded_at > $1
