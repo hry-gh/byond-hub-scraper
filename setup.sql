@@ -18,3 +18,16 @@ CREATE TABLE IF NOT EXISTS player_history (
 
 CREATE INDEX IF NOT EXISTS idx_player_history_address ON player_history(address);
 CREATE INDEX IF NOT EXISTS idx_player_history_recorded_at ON player_history(recorded_at);
+
+CREATE TABLE IF NOT EXISTS time_dilation_history (
+    id SERIAL PRIMARY KEY,
+    address TEXT NOT NULL,
+    time_dilation_current REAL NOT NULL,
+    time_dilation_avg REAL,
+    time_dilation_avg_fast REAL,
+    time_dilation_avg_slow REAL,
+    recorded_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_time_dilation_history_address ON time_dilation_history(address);
+CREATE INDEX IF NOT EXISTS idx_time_dilation_history_recorded_at ON time_dilation_history(recorded_at);

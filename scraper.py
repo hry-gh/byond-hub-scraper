@@ -271,6 +271,25 @@ def init_db(conn):
             ON player_history(recorded_at)
         """)
         cur.execute("""
+            CREATE TABLE IF NOT EXISTS time_dilation_history (
+                id SERIAL PRIMARY KEY,
+                address TEXT NOT NULL,
+                time_dilation_current REAL NOT NULL,
+                time_dilation_avg REAL,
+                time_dilation_avg_fast REAL,
+                time_dilation_avg_slow REAL,
+                recorded_at TIMESTAMP DEFAULT NOW()
+            )
+        """)
+        cur.execute("""
+            CREATE INDEX IF NOT EXISTS idx_time_dilation_history_address
+            ON time_dilation_history(address)
+        """)
+        cur.execute("""
+            CREATE INDEX IF NOT EXISTS idx_time_dilation_history_recorded_at
+            ON time_dilation_history(recorded_at)
+        """)
+        cur.execute("""
             CREATE TABLE IF NOT EXISTS address_cache (
                 world_id BIGINT PRIMARY KEY,
                 address TEXT NOT NULL,
@@ -324,6 +343,18 @@ def save_to_db(conn, servers):
                 INSERT INTO player_history (address, players)
                 VALUES (%s, %s)
             """, (address, server["players"]))
+
+            if topic_status and "time_dilation_current" in topic_status:
+                cur.execute("""
+                    INSERT INTO time_dilation_history (address, time_dilation_current, time_dilation_avg, time_dilation_avg_fast, time_dilation_avg_slow)
+                    VALUES (%s, %s, %s, %s, %s)
+                """, (
+                    address,
+                    topic_status.get("time_dilation_current"),
+                    topic_status.get("time_dilation_avg"),
+                    topic_status.get("time_dilation_avg_fast"),
+                    topic_status.get("time_dilation_avg_slow")
+                ))
 
     conn.commit()
 

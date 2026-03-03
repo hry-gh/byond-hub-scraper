@@ -50,6 +50,20 @@ struct HistoryPoint {
 }
 
 #[derive(Serialize)]
+struct TimeDilationPoint {
+    timestamp: NaiveDateTime,
+    time_dilation: f64,
+}
+
+#[derive(Serialize)]
+struct TimeDilationStats {
+    avg: f64,
+    min: f64,
+    max: f64,
+    history: Vec<TimeDilationPoint>,
+}
+
+#[derive(Serialize)]
 struct ServerStats {
     period: String,
     total_records: i64,
@@ -62,6 +76,9 @@ struct ServerStats {
     hourly_averages: [f64; 24],
     // Time series for charting
     history: Vec<HistoryPoint>,
+    // Time dilation stats (only present if server reports it)
+    #[serde(skip_serializing_if = "Option::is_none")]
+    time_dilation: Option<TimeDilationStats>,
 }
 
 #[derive(sqlx::FromRow)]
@@ -84,6 +101,14 @@ struct BucketedHistory {
     avg: Option<f64>,
 }
 
+#[derive(sqlx::FromRow)]
+struct TimeDilationBasicStats {
+    count: Option<i64>,
+    avg: Option<f64>,
+    min: Option<f32>,
+    max: Option<f32>,
+}
+
 // Custom JSON response that doesn't escape HTML
 struct RawJson<T>(T);
 
@@ -93,10 +118,7 @@ impl<T: Serialize> IntoResponse for RawJson<T> {
         let formatter = serde_json::ser::PrettyFormatter::new();
         let mut ser = serde_json::Serializer::with_formatter(&mut buf, formatter);
         self.0.serialize(&mut ser).unwrap();
-        (
-            [(header::CONTENT_TYPE, "application/json")],
-            buf,
-        ).into_response()
+        ([(header::CONTENT_TYPE, "application/json")], buf).into_response()
     }
 }
 
@@ -194,7 +216,7 @@ async fn get_server_stats(
         sqlx::query_as::<_, GroupedAvg>(
             "SELECT EXTRACT(DOW FROM recorded_at)::float8 as group_key, AVG(players)::float8 as avg
              FROM player_history WHERE address = $1 AND recorded_at > $2
-             GROUP BY EXTRACT(DOW FROM recorded_at) ORDER BY group_key"
+             GROUP BY EXTRACT(DOW FROM recorded_at) ORDER BY group_key",
         )
         .bind(&address)
         .bind(since_time)
@@ -204,12 +226,13 @@ async fn get_server_stats(
         sqlx::query_as::<_, GroupedAvg>(
             "SELECT EXTRACT(DOW FROM recorded_at)::float8 as group_key, AVG(players)::float8 as avg
              FROM player_history WHERE address = $1
-             GROUP BY EXTRACT(DOW FROM recorded_at) ORDER BY group_key"
+             GROUP BY EXTRACT(DOW FROM recorded_at) ORDER BY group_key",
         )
         .bind(&address)
         .fetch_all(&pool)
         .await
-    }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    }
+    .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
 
     let mut weekday_averages = [0.0; 7];
     for row in weekday_rows {
@@ -241,7 +264,8 @@ async fn get_server_stats(
         .bind(&address)
         .fetch_all(&pool)
         .await
-    }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    }
+    .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
 
     let mut hourly_averages = [0.0; 24];
     for row in hourly_rows {
@@ -327,6 +351,115 @@ async fn get_server_stats(
         })
         .collect();
 
+    let td_stats = if let Some(since_time) = since {
+        sqlx::query_as::<_, TimeDilationBasicStats>(
+            "SELECT COUNT(*) as count,
+                    AVG(time_dilation_current)::float8 as avg,
+                    MIN(time_dilation_current) as min,
+                    MAX(time_dilation_current) as max
+             FROM time_dilation_history WHERE address = $1 AND recorded_at > $2",
+        )
+        .bind(&address)
+        .bind(since_time)
+        .fetch_one(&pool)
+        .await
+    } else {
+        sqlx::query_as::<_, TimeDilationBasicStats>(
+            "SELECT COUNT(*) as count,
+                    AVG(time_dilation_current)::float8 as avg,
+                    MIN(time_dilation_current) as min,
+                    MAX(time_dilation_current) as max
+             FROM time_dilation_history WHERE address = $1",
+        )
+        .bind(&address)
+        .fetch_one(&pool)
+        .await
+    }
+    .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+
+    let time_dilation = if td_stats.count.unwrap_or(0) > 0 {
+        let td_history_rows = if let Some(since_time) = since {
+            match period {
+                "day" => {
+                    sqlx::query_as::<_, BucketedHistory>(
+                        "SELECT date_trunc('hour', recorded_at) +
+                                INTERVAL '30 minutes' * (EXTRACT(MINUTE FROM recorded_at)::int / 30) as bucket,
+                                AVG(time_dilation_current)::float8 as avg
+                         FROM time_dilation_history WHERE address = $1 AND recorded_at > $2
+                         GROUP BY bucket ORDER BY bucket ASC"
+                    )
+                    .bind(&address)
+                    .bind(since_time)
+                    .fetch_all(&pool)
+                    .await
+                }
+                "week" => {
+                    sqlx::query_as::<_, BucketedHistory>(
+                        "SELECT date_trunc('hour', recorded_at) as bucket, AVG(time_dilation_current)::float8 as avg
+                         FROM time_dilation_history WHERE address = $1 AND recorded_at > $2
+                         GROUP BY bucket ORDER BY bucket ASC"
+                    )
+                    .bind(&address)
+                    .bind(since_time)
+                    .fetch_all(&pool)
+                    .await
+                }
+                "month" => {
+                    sqlx::query_as::<_, BucketedHistory>(
+                        "SELECT date_trunc('day', recorded_at) +
+                                INTERVAL '6 hours' * (EXTRACT(HOUR FROM recorded_at)::int / 6) as bucket,
+                                AVG(time_dilation_current)::float8 as avg
+                         FROM time_dilation_history WHERE address = $1 AND recorded_at > $2
+                         GROUP BY bucket ORDER BY bucket ASC"
+                    )
+                    .bind(&address)
+                    .bind(since_time)
+                    .fetch_all(&pool)
+                    .await
+                }
+                _ => {
+                    sqlx::query_as::<_, BucketedHistory>(
+                        "SELECT date_trunc('day', recorded_at) as bucket, AVG(time_dilation_current)::float8 as avg
+                         FROM time_dilation_history WHERE address = $1 AND recorded_at > $2
+                         GROUP BY bucket ORDER BY bucket ASC"
+                    )
+                    .bind(&address)
+                    .bind(since_time)
+                    .fetch_all(&pool)
+                    .await
+                }
+            }
+        } else {
+            sqlx::query_as::<_, BucketedHistory>(
+                "SELECT date_trunc('day', recorded_at) as bucket, AVG(time_dilation_current)::float8 as avg
+                 FROM time_dilation_history WHERE address = $1
+                 GROUP BY bucket ORDER BY bucket ASC"
+            )
+            .bind(&address)
+            .fetch_all(&pool)
+            .await
+        }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+
+        let td_history: Vec<TimeDilationPoint> = td_history_rows
+            .into_iter()
+            .filter_map(|row| {
+                Some(TimeDilationPoint {
+                    timestamp: row.bucket?,
+                    time_dilation: row.avg?,
+                })
+            })
+            .collect();
+
+        Some(TimeDilationStats {
+            avg: td_stats.avg.unwrap_or(0.0),
+            min: td_stats.min.unwrap_or(0.0) as f64,
+            max: td_stats.max.unwrap_or(0.0) as f64,
+            history: td_history,
+        })
+    } else {
+        None
+    };
+
     Ok(RawJson(ServerStats {
         period: period.to_string(),
         total_records: basic_stats.count.unwrap_or(0),
@@ -336,6 +469,7 @@ async fn get_server_stats(
         weekday_averages,
         hourly_averages,
         history,
+        time_dilation,
     }))
 }
 
@@ -520,6 +654,7 @@ async fn get_global_stats(
         weekday_averages,
         hourly_averages,
         history,
+        time_dilation: None,
     }))
 }
 
