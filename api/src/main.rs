@@ -278,13 +278,13 @@ async fn get_server_stats(
     }
 
     // Time-bucketed history for line charts
-    // day: 30 min buckets, week: 1 hour, month: 6 hours, year/all: 1 day
+    // day: 5 min buckets, week: 1 hour, month: 6 hours, year/all: 1 day
     let history_rows = if let Some(since_time) = since {
         match period {
             "day" => {
                 sqlx::query_as::<_, BucketedHistory>(
                     "SELECT date_trunc('hour', recorded_at) +
-                            INTERVAL '30 minutes' * (EXTRACT(MINUTE FROM recorded_at)::int / 30) as bucket,
+                            INTERVAL '5 minutes' * (EXTRACT(MINUTE FROM recorded_at)::int / 5) as bucket,
                             AVG(players)::float8 as avg
                      FROM player_history WHERE address = $1 AND recorded_at > $2
                      GROUP BY bucket ORDER BY bucket ASC"
@@ -383,7 +383,7 @@ async fn get_server_stats(
                 "day" => {
                     sqlx::query_as::<_, BucketedHistory>(
                         "SELECT date_trunc('hour', recorded_at) +
-                                INTERVAL '30 minutes' * (EXTRACT(MINUTE FROM recorded_at)::int / 30) as bucket,
+                                INTERVAL '5 minutes' * (EXTRACT(MINUTE FROM recorded_at)::int / 5) as bucket,
                                 AVG(time_dilation_current)::float8 as avg
                          FROM time_dilation_history WHERE address = $1 AND recorded_at > $2
                          GROUP BY bucket ORDER BY bucket ASC"
@@ -574,7 +574,7 @@ async fn get_global_stats(
                 sqlx::query_as::<_, BucketedHistory>(
                     "SELECT bucket, AVG(total)::float8 as avg FROM (
                         SELECT date_trunc('hour', recorded_at) +
-                               INTERVAL '30 minutes' * (EXTRACT(MINUTE FROM recorded_at)::int / 30) as bucket,
+                               INTERVAL '5 minutes' * (EXTRACT(MINUTE FROM recorded_at)::int / 5) as bucket,
                                SUM(players) as total
                         FROM player_history WHERE recorded_at > $1
                         GROUP BY recorded_at
