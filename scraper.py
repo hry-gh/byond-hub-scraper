@@ -114,10 +114,12 @@ def parse_html_data(html):
         if not url:
             continue
 
-        players = 0
+        players = None
         player_match = re.search(r"Logged in:\s*(\d+)", entry_text)
         if player_match:
             players = int(player_match.group(1))
+        elif "No players." in entry_text:
+            players = 0
 
         status = ""
         status_div = entry.select_one(".live_game_status")
@@ -141,6 +143,9 @@ def parse_html_data(html):
             )
             status_html = status_html.strip()
             status = status_html
+
+        if players is None:
+            continue
 
         norm_url = normalize_url(url)
         if norm_url in data:
@@ -206,7 +211,7 @@ def parse_text_format(text):
 
         servers.append({
             "connection_url": url,
-            "players": 0,
+            "players": None,
             "name": name,
             "description": description,
             "status": ""
@@ -333,6 +338,8 @@ def save_to_db(conn, servers):
             if not isinstance(topic_status, dict):
                 topic_status = None
 
+            players = server["players"]
+
             cur.execute("""
                 INSERT INTO servers (address, world_id, name, description, status, topic_status, players, online, updated_at)
                 VALUES (%s, %s, %s, %s, %s, %s, %s, TRUE, NOW())
@@ -342,15 +349,16 @@ def save_to_db(conn, servers):
                     description = EXCLUDED.description,
                     status = EXCLUDED.status,
                     topic_status = EXCLUDED.topic_status,
-                    players = EXCLUDED.players,
+                    players = COALESCE(EXCLUDED.players, servers.players),
                     online = TRUE,
                     updated_at = NOW()
-            """, (address, world_id, server["name"], server["description"], server["status"], Json(topic_status) if topic_status else None, server["players"]))
+            """, (address, world_id, server["name"], server["description"], server["status"], Json(topic_status) if topic_status else None, players))
 
-            cur.execute("""
-                INSERT INTO player_history (address, players)
-                VALUES (%s, %s)
-            """, (address, server["players"]))
+            if players is not None:
+                cur.execute("""
+                    INSERT INTO player_history (address, players)
+                    VALUES (%s, %s)
+                """, (address, players))
 
             if topic_status and "time_dilation_current" in topic_status:
                 cur.execute("""
