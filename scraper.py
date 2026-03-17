@@ -18,6 +18,13 @@ logging.getLogger("zendriver").setLevel(logging.ERROR)
 URL = "https://www.byond.com/games/Exadv1/SpaceStation13"
 TEXT_URL = "https://www.byond.com/games/Exadv1/SpaceStation13?format=text"
 
+
+def normalize_url(url):
+    """Normalize byond:// URLs for consistent matching."""
+    if not url:
+        return None
+    return url.rstrip('/').lower()
+
 def find_chrome():
     """Find Chrome/Chromium executable."""
     paths = [
@@ -77,10 +84,10 @@ async def scrape_servers():
     servers = parse_text_format(text_data)
 
     for server in servers:
-        url = server["connection_url"]
-        if url in html_data:
-            server["players"] = html_data[url]["players"]
-            server["status"] = html_data[url]["status"]
+        norm_url = normalize_url(server["connection_url"])
+        if norm_url in html_data:
+            server["players"] = html_data[norm_url]["players"]
+            server["status"] = html_data[norm_url]["status"]
 
     return servers
 
@@ -135,11 +142,12 @@ def parse_html_data(html):
             status_html = status_html.strip()
             status = status_html
 
-        if url in data:
-            if players > data[url]["players"]:
-                data[url] = {"players": players, "status": status}
+        norm_url = normalize_url(url)
+        if norm_url in data:
+            if players > data[norm_url]["players"]:
+                data[norm_url] = {"players": players, "status": status}
         else:
-            data[url] = {"players": players, "status": status}
+            data[norm_url] = {"players": players, "status": status}
 
     return data
 
