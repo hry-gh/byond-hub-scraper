@@ -571,6 +571,12 @@ def run_once():
         log("DATABASE_URL not set, skipping database save")
         return servers
 
+    total_players = sum(s.get("players") or 0 for s in servers)
+    if total_players == 0:
+        log("All servers reporting 0 players, skipping database save")
+        conn.close()
+        return servers
+
     mark_all_offline(conn)
     save_to_db(conn, servers)
     conn.close()
