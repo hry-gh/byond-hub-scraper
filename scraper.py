@@ -338,7 +338,7 @@ def save_to_db(conn, servers):
             if not isinstance(topic_status, dict):
                 topic_status = None
 
-            players = server["players"]
+            players = server["players"] or 0
 
             cur.execute("""
                 INSERT INTO servers (address, world_id, name, description, status, topic_status, players, online, updated_at)
