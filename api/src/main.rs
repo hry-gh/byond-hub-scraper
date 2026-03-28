@@ -11,6 +11,7 @@ use sqlx::postgres::PgPoolOptions;
 use sqlx::PgPool;
 use std::env;
 use tower_http::cors::{Any, CorsLayer};
+use tracing::error;
 
 #[derive(Serialize, sqlx::FromRow)]
 struct Server {
@@ -128,7 +129,7 @@ async fn get_servers(State(pool): State<PgPool>) -> Result<RawJson<Vec<Server>>,
     )
     .fetch_all(&pool)
     .await
-    .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    .map_err(|e| { error!("get_servers query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
 
     Ok(RawJson(servers))
 }
@@ -144,7 +145,7 @@ async fn get_server(
     .bind(&address)
     .fetch_optional(&pool)
     .await
-    .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?
+    .map_err(|e| { error!("get_server query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?
     .ok_or(StatusCode::NOT_FOUND)?;
 
     Ok(RawJson(server))
@@ -169,7 +170,7 @@ async fn get_server_history(
     .bind(since)
     .fetch_all(&pool)
     .await
-    .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    .map_err(|e| { error!("get_server_history query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
 
     Ok(RawJson(history))
 }
@@ -209,7 +210,7 @@ async fn get_server_stats(
         .bind(&address)
         .fetch_one(&pool)
         .await
-    }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    }.map_err(|e| { error!("get_server_stats basic_stats query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
 
     // Weekday averages (0=Sunday, 6=Saturday)
     let weekday_rows = if let Some(since_time) = since {
@@ -232,7 +233,7 @@ async fn get_server_stats(
         .fetch_all(&pool)
         .await
     }
-    .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    .map_err(|e| { error!("weekday averages query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
 
     let mut weekday_averages = [0.0; 7];
     for row in weekday_rows {
@@ -265,7 +266,7 @@ async fn get_server_stats(
         .fetch_all(&pool)
         .await
     }
-    .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    .map_err(|e| { error!("hourly averages query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
 
     let mut hourly_averages = [0.0; 24];
     for row in hourly_rows {
@@ -339,7 +340,7 @@ async fn get_server_stats(
         .bind(&address)
         .fetch_all(&pool)
         .await
-    }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    }.map_err(|e| { error!("server history bucketed query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
 
     let history: Vec<HistoryPoint> = history_rows
         .into_iter()
@@ -375,7 +376,7 @@ async fn get_server_stats(
         .fetch_one(&pool)
         .await
     }
-    .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    .map_err(|e| { error!("time_dilation basic stats query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
 
     let time_dilation = if td_stats.count.unwrap_or(0) > 0 {
         let td_history_rows = if let Some(since_time) = since {
@@ -438,7 +439,7 @@ async fn get_server_stats(
             .bind(&address)
             .fetch_all(&pool)
             .await
-        }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+        }.map_err(|e| { error!("time_dilation history query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
 
         let td_history: Vec<TimeDilationPoint> = td_history_rows
             .into_iter()
@@ -505,7 +506,7 @@ async fn get_global_stats(
         )
         .fetch_one(&pool)
         .await
-    }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    }.map_err(|e| { error!("global basic_stats query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
 
     // Weekday averages (0=Sunday, 6=Saturday)
     let weekday_rows = if let Some(since_time) = since {
@@ -525,7 +526,7 @@ async fn get_global_stats(
         )
         .fetch_all(&pool)
         .await
-    }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    }.map_err(|e| { error!("global weekday averages query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
 
     let mut weekday_averages = [0.0; 7];
     for row in weekday_rows {
@@ -555,7 +556,7 @@ async fn get_global_stats(
         )
         .fetch_all(&pool)
         .await
-    }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    }.map_err(|e| { error!("global hourly averages query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
 
     let mut hourly_averages = [0.0; 24];
     for row in hourly_rows {
@@ -633,7 +634,7 @@ async fn get_global_stats(
         )
         .fetch_all(&pool)
         .await
-    }.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    }.map_err(|e| { error!("global history bucketed query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
 
     let history: Vec<HistoryPoint> = history_rows
         .into_iter()
@@ -660,6 +661,8 @@ async fn get_global_stats(
 
 #[tokio::main]
 async fn main() {
+    tracing_subscriber::fmt::init();
+
     let database_url = env::var("DATABASE_URL").expect("DATABASE_URL must be set");
 
     let pool = PgPoolOptions::new()
