@@ -21,7 +21,7 @@ struct Server {
     description: Option<String>,
     status: Option<String>,
     topic_status: Option<serde_json::Value>,
-    players: i32,
+    players: Option<i32>,
     online: bool,
     updated_at: NaiveDateTime,
 }
@@ -233,7 +233,10 @@ async fn get_server_stats(
         .fetch_all(&pool)
         .await
     }
-    .map_err(|e| { error!("weekday averages query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
+    .map_err(|e| {
+        error!("weekday averages query failed: {e}");
+        StatusCode::INTERNAL_SERVER_ERROR
+    })?;
 
     let mut weekday_averages = [0.0; 7];
     for row in weekday_rows {
@@ -266,7 +269,10 @@ async fn get_server_stats(
         .fetch_all(&pool)
         .await
     }
-    .map_err(|e| { error!("hourly averages query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
+    .map_err(|e| {
+        error!("hourly averages query failed: {e}");
+        StatusCode::INTERNAL_SERVER_ERROR
+    })?;
 
     let mut hourly_averages = [0.0; 24];
     for row in hourly_rows {
@@ -376,7 +382,10 @@ async fn get_server_stats(
         .fetch_one(&pool)
         .await
     }
-    .map_err(|e| { error!("time_dilation basic stats query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
+    .map_err(|e| {
+        error!("time_dilation basic stats query failed: {e}");
+        StatusCode::INTERNAL_SERVER_ERROR
+    })?;
 
     let time_dilation = if td_stats.count.unwrap_or(0) > 0 {
         let td_history_rows = if let Some(since_time) = since {
