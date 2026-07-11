@@ -107,9 +107,13 @@ def parse_html_data(html):
         if link:
             url = link.get("href")
         else:
-            url_match = re.search(r"byond://[^\s<\"']+", entry_html)
-            if url_match:
-                url = url_match.group(0)
+            nobr = entry.select_one('nobr')
+            if nobr and nobr.get_text().startswith("byond://"):
+                url = nobr.get_text().strip()
+            else:
+                url_match = re.search(r"byond://[^\s<\"']+", entry_html)
+                if url_match:
+                    url = url_match.group(0)
 
         if not url:
             continue
