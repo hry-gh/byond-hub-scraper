@@ -1,230 +1,107 @@
 import argparse
-import asyncio
-import html
+import ctypes
 import json
-import logging
 import os
 import re
 import time
-import requests
-import zendriver as zd
-from bs4 import BeautifulSoup
 
 TEST_MODE = False
 
-logging.getLogger("websockets").setLevel(logging.ERROR)
-logging.getLogger("zendriver").setLevel(logging.ERROR)
-
-URL = "https://www.byond.com/games/Exadv1/SpaceStation13"
-TEXT_URL = "https://www.byond.com/games/Exadv1/SpaceStation13?format=text"
+LIBRARY_PATH = os.environ.get("HUB_LIBRARY_PATH", "")
+DATABASE_URL = os.environ.get("DATABASE_URL", "")
+HUB_TIMEOUT_MS = int(os.environ.get("HUB_TIMEOUT_MS", "15000"))
 
 
-def normalize_url(url):
-    """Normalize byond:// URLs for consistent matching."""
-    if not url:
-        return None
-    return url.rstrip('/').lower()
-
-def find_chrome():
-    """Find Chrome/Chromium executable."""
-    paths = [
-        # GitHub Actions runner
-        "/usr/bin/google-chrome",
-        "/usr/bin/google-chrome-stable",
-        # Linux - common locations
-        "/usr/bin/chromium",
-        "/usr/bin/chromium-browser",
-        "/snap/bin/chromium",
-        # macOS
-        os.path.expanduser("~/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"),
-        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-        "/Applications/Chromium.app/Contents/MacOS/Chromium",
-    ]
-    for path in paths:
+def find_hub_library():
+    if LIBRARY_PATH:
+        return LIBRARY_PATH
+    import sys
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    if sys.platform == "darwin":
+        names = ["libhub_client_rs.dylib", "libhub_client_rs.so"]
+    elif sys.platform == "win32":
+        names = ["hub_client_rs.dll"]
+    else:
+        names = ["libhub_client_rs.so", "libhub_client_rs.dylib"]
+    candidates = [os.path.join(script_dir, n) for n in names]
+    for path in candidates:
         if os.path.exists(path):
             return path
     return None
 
 
-async def scrape_servers():
-    chrome_path = find_chrome()
-    browser_args = [
-        "--password-store=basic",
-        "--use-mock-keychain",
-        "--disable-background-networking",
-        # Move window off-screen
-        "--window-position=-2000,-2000",
-        # Required for running as root/in containers
-        "--no-sandbox",
-        # Overcome limited /dev/shm in containers
-        "--disable-dev-shm-usage",
-    ]
+def parse_status_html(status_html):
+    import html as html_mod
+    from re import sub
 
-    if chrome_path:
-        browser = await zd.start(
-            browser_executable_path=chrome_path,
-            browser_args=browser_args,
-        )
-    else:
-        browser = await zd.start(browser_args=browser_args)
+    decoded = html_mod.unescape(status_html)
 
-    page = await browser.get(URL)
-    await asyncio.sleep(10)
-    html = await page.get_content()
+    name_match = re.search(r'<b>([^<]+)</b>', decoded)
+    name = name_match.group(1).strip() if name_match else ""
 
-    try:
-        await browser.stop()
-    except Exception:
-        pass
+    text = re.sub(r'<[^>]+>', ' ', decoded)
+    text = re.sub(r'\s+', ' ', text).strip()
 
-    resp = requests.get(TEXT_URL, headers={"User-Agent": "Mozilla/5.0"})
-    text_data = resp.text
+    desc = text
+    if name and desc.startswith(name):
+        desc = desc[len(name):].strip()
+    desc = re.sub(r'^[\s—\-:]+', '', desc)
+    desc = re.sub(r'^\(\s*Discord\s*\)\]?\s*', '', desc)
+    desc = re.sub(r'^\[\s*', '', desc)
+    desc = re.sub(r'\s*\]$', '', desc)
+    desc = desc.strip(' |')
 
-    html_data = parse_html_data(html)
-    servers = parse_text_format(text_data)
-
-    for server in servers:
-        norm_url = normalize_url(server["connection_url"])
-        if norm_url in html_data:
-            server["players"] = html_data[norm_url]["players"]
-            server["status"] = html_data[norm_url]["status"]
-
-    return servers
+    return name, desc
 
 
-def parse_html_data(html):
-    data = {}
-    soup = BeautifulSoup(html, "html.parser")
-    entries = soup.select(".live_game_entry")
+def fetch_servers():
+    lib_path = find_hub_library()
+    if not lib_path:
+        raise RuntimeError("hub-client-rs library not found. Set HUB_LIBRARY_PATH.")
 
-    for entry in entries:
-        entry_html = str(entry)
-        entry_text = entry.get_text()
+    lib = ctypes.CDLL(lib_path)
+    lib.get_servers.argtypes = [ctypes.c_uint64]
+    lib.get_servers.restype = ctypes.c_char_p
 
-        # Extract byond:// URL
-        url = None
-        link = entry.select_one('a[href^="byond://"]')
-        if link:
-            url = link.get("href")
-        else:
-            nobr = entry.select_one('nobr')
-            if nobr and nobr.get_text().startswith("byond://"):
-                url = nobr.get_text().strip()
-            else:
-                url_match = re.search(r"byond://[^\s<\"']+", entry_html)
-                if url_match:
-                    url = url_match.group(0)
+    result = lib.get_servers(HUB_TIMEOUT_MS)
+    if not result:
+        raise RuntimeError("hub-client returned null (timeout or error)")
 
-        if not url:
-            continue
+    response = json.loads(result.decode("utf-8"))
+    if response.get("error"):
+        raise RuntimeError(f"hub-client error: {response['error']}")
 
-        players = None
-        player_match = re.search(r"Logged in:\s*(\d+)", entry_text)
-        if player_match:
-            players = int(player_match.group(1))
-        elif "No players." in entry_text:
-            players = 0
-
-        status = ""
-        status_div = entry.select_one(".live_game_status")
-        if status_div:
-            status_html = str(status_div)
-            status_html = re.sub(r'^<div[^>]*>', '', status_html)
-            status_html = re.sub(r'</div>$', '', status_html)
-            status_html = re.sub(r'\s*<br\s*/?>\s*<br\s*/?>.*$', '', status_html, flags=re.DOTALL)
-            status_html = re.sub(r'(\s*<br\s*/?>)+\s*$', '', status_html)
-            status_html = re.sub(r'<span[^>]*class="smaller"[^>]*>.*?</span>', '', status_html, flags=re.DOTALL)
-            status_html = re.sub(
-                r'(<a\s[^>]*>)([^<\]\)]+)([\]\)]+)([^<]*</a>)',
-                r'\1\2</a>\3\4',
-                status_html
-            )
-            status_html = re.sub(
-                r'(<a\s[^>]*>)(\w+)([\]\)]+)(.*?)(</a>)',
-                r'\1\2</a>\3\4',
-                status_html,
-                flags=re.DOTALL
-            )
-            status_html = status_html.strip()
-            status = status_html
-
-        if players is None:
-            continue
-
-        norm_url = normalize_url(url)
-        if norm_url in data:
-            if players > data[norm_url]["players"]:
-                data[norm_url] = {"players": players, "status": status}
-        else:
-            data[norm_url] = {"players": players, "status": status}
-
-    return data
-
-
-def parse_text_format(text):
+    hub_servers = response.get("servers") or []
     servers = []
+    for hs in hub_servers:
+        address = None
+        if hs.get("ip") and hs.get("port"):
+            address = f"{hs['ip']}:{hs['port']}"
 
-    text = text.replace('\r\n', '\n')
-
-    world_pattern = re.compile(r'^world/\d+$', re.MULTILINE)
-    sections = world_pattern.split(text)
-
-    for section in sections[1:]:
-        lines = section.strip().split('\n')
-
-        url = None
-        status = None
-
-        for line in lines:
-            line = line.strip()
-            if line.startswith('url = '):
-                url = line[7:-1]
-            elif line.startswith('status = '):
-                status = line[10:-1]
-                status = status.replace('\\"', '"').replace('\\n', '\n').replace('\\[', '[').replace('\\]', ']')
-                status = html.unescape(status)
-
-        if not url:
-            continue
-
-        name = url
-        description = ""
-
-        if status:
-            status_soup = BeautifulSoup(status, "html.parser")
-
-            bold = status_soup.find("b")
-            if bold:
-                name = bold.get_text(strip=True)
-
-            for br in status_soup.find_all("br"):
-                br.replace_with(" | ")
-            desc = status_soup.get_text(separator=" ").strip()
-            desc = re.sub(r'\s+', ' ', desc)
-
-            if desc.startswith(name):
-                desc = desc[len(name):].strip()
-
-            desc = re.sub(r'^[\s—\-:]+', '', desc)
-            desc = re.sub(r'^\(\s*Discord\s*\)\]?\s*', '', desc)  # Remove (Discord)] prefix
-            desc = re.sub(r'^\[\s*', '', desc)  # Remove leading [
-            desc = re.sub(r'\s*\]$', '', desc)  # Remove trailing ]
-            desc = re.sub(r'\|\s*\|', '|', desc)  # Remove double pipes
-            desc = desc.strip(' |')
-            description = desc
+        status_html = hs.get("name", "")
+        name, description = parse_status_html(status_html)
+        world_id = hs["url"]
+        connection_url = f"byond://BYOND.world.{world_id}"
 
         servers.append({
-            "connection_url": url,
-            "players": None,
-            "name": name,
+            "connection_url": connection_url,
+            "players": hs.get("players", 0),
+            "name": name or connection_url,
             "description": description,
-            "status": ""
+            "status": status_html,
+            "address": address,
         })
 
     return servers
 
 
-DATABASE_URL = os.environ.get("DATABASE_URL", "")
+def extract_world_id(url):
+    match = re.search(r'BYOND\.world\.(\d+)', url)
+    return int(match.group(1)) if match else None
+
+
+def log(msg):
+    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {msg}", flush=True)
 
 
 def init_db(conn):
@@ -316,11 +193,6 @@ def init_db(conn):
     conn.commit()
 
 
-def extract_world_id(url):
-    match = re.search(r'BYOND\.world\.(\d+)', url)
-    return int(match.group(1)) if match else None
-
-
 def mark_all_offline(conn):
     with conn.cursor() as cur:
         cur.execute("UPDATE servers SET online = FALSE")
@@ -379,82 +251,6 @@ def save_to_db(conn, servers):
     conn.commit()
 
 
-def log(msg):
-    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {msg}", flush=True)
-
-
-def resolve_addresses(servers, conn=None):
-    try:
-        from hub_lookup import lookup_worlds
-    except ImportError:
-        log("hub_lookup module not available - using connection URLs as addresses")
-        for server in servers:
-            server["address"] = server["connection_url"]
-        return True
-
-    world_ids = []
-    id_to_server = {}
-
-    for server in servers:
-        world_id = extract_world_id(server["connection_url"])
-        if world_id:
-            world_ids.append(str(world_id))
-            id_to_server[str(world_id)] = server
-
-    if not world_ids:
-        return False
-
-    cached = {}
-    uncached_ids = world_ids
-    if conn:
-        with conn.cursor() as cur:
-            cur.execute("""
-                SELECT world_id, address FROM address_cache
-                WHERE world_id = ANY(%s)
-                AND cached_at > NOW() - INTERVAL '1 week'
-            """, ([int(wid) for wid in world_ids],))
-            for row in cur.fetchall():
-                cached[str(row[0])] = row[1]
-
-        for world_id, address in cached.items():
-            if world_id in id_to_server:
-                id_to_server[world_id]["address"] = address
-
-        uncached_ids = [wid for wid in world_ids if wid not in cached]
-        if cached:
-            log(f"Cache hit for {len(cached)}/{len(world_ids)} addresses")
-
-    if not uncached_ids:
-        return False
-
-    try:
-        results = lookup_worlds(uncached_ids)
-        resolved = 0
-        new_cache = []
-        for world_id, result in zip(uncached_ids, results):
-            if result.address:
-                id_to_server[world_id]["address"] = result.address
-                new_cache.append((int(world_id), result.address))
-                resolved += 1
-        log(f"Resolved {resolved}/{len(uncached_ids)} addresses from hub")
-
-        if conn and new_cache:
-            with conn.cursor() as cur:
-                for world_id, address in new_cache:
-                    cur.execute("""
-                        INSERT INTO address_cache (world_id, address, cached_at)
-                        VALUES (%s, %s, NOW())
-                        ON CONFLICT (world_id) DO UPDATE SET
-                            address = EXCLUDED.address,
-                            cached_at = NOW()
-                    """, (world_id, address))
-            conn.commit()
-    except Exception as e:
-        log(f"Address resolution failed: {e}")
-
-    return False
-
-
 def ping_servers(servers, timeout=5):
     import socket
     from concurrent.futures import ThreadPoolExecutor, TimeoutError
@@ -466,19 +262,15 @@ def ping_servers(servers, timeout=5):
 
         keys = list(result.keys())
 
-        # Check if the only key looks like JSON
         if len(keys) == 1 and keys[0].startswith("{"):
             try:
                 parsed = json.loads(keys[0])
-                # If it has a "data" field, extract that
                 if isinstance(parsed, dict) and "data" in parsed:
                     return parsed["data"]
                 return parsed
             except json.JSONDecodeError:
                 pass
 
-        # Handle query parameter format: {"key": ["value"], ...}
-        # Flatten single-item lists and parse numeric values
         cleaned = {}
         for key, value in result.items():
             if isinstance(value, list) and len(value) == 1:
@@ -508,7 +300,6 @@ def ping_servers(servers, timeout=5):
                 port = int(port_str)
                 result = queryStatus(host, port)
 
-                # If response only has "players", try JSON query for more detail
                 if result and list(result.keys()) == ["players"]:
                     try:
                         json_query = '{"query":"status","auth":"anonymous","source":"byond-hub-scraper"}'
@@ -547,15 +338,9 @@ def ping_servers(servers, timeout=5):
 
 
 def run_once():
-    log("Scraping BYOND SS13 servers...")
+    log("Fetching servers from BYOND hub...")
 
-    loop = asyncio.new_event_loop()
-    loop.set_exception_handler(lambda _loop, _ctx: None)
-    asyncio.set_event_loop(loop)
-
-    servers = loop.run_until_complete(scrape_servers())
-    loop.close()
-
+    servers = fetch_servers()
     log(f"Found {len(servers)} servers")
 
     conn = None
@@ -564,7 +349,6 @@ def run_once():
         conn = psycopg2.connect(DATABASE_URL)
         init_db(conn)
 
-    resolve_addresses(servers, conn)
     ping_servers(servers)
 
     if TEST_MODE:
