@@ -1,6 +1,6 @@
 use axum::{
     extract::{Path, Query, State},
-    http::{header, StatusCode},
+    http::{header, Request, StatusCode},
     response::{IntoResponse, Response},
     routing::get,
     Router,
@@ -11,7 +11,9 @@ use sqlx::postgres::PgPoolOptions;
 use sqlx::PgPool;
 use std::env;
 use tower_http::cors::{Any, CorsLayer};
-use tracing::error;
+use tower_http::trace::TraceLayer;
+use tracing::{error, info, info_span, Span};
+use std::time::Instant;
 
 #[derive(Serialize, sqlx::FromRow)]
 struct Server {
@@ -124,6 +126,8 @@ impl<T: Serialize> IntoResponse for RawJson<T> {
 }
 
 async fn get_servers(State(pool): State<PgPool>) -> Result<RawJson<Vec<Server>>, StatusCode> {
+    let start = Instant::now();
+    info!("get_servers: starting query");
     let servers = sqlx::query_as::<_, Server>(
         "SELECT address, world_id, name, description, status, topic_status, players, online, updated_at FROM servers ORDER BY online DESC, players DESC",
     )
@@ -131,6 +135,7 @@ async fn get_servers(State(pool): State<PgPool>) -> Result<RawJson<Vec<Server>>,
     .await
     .map_err(|e| { error!("get_servers query failed: {e}"); StatusCode::INTERNAL_SERVER_ERROR })?;
 
+    info!("get_servers: returned {} rows in {:?}", servers.len(), start.elapsed());
     Ok(RawJson(servers))
 }
 
@@ -670,17 +675,32 @@ async fn get_global_stats(
 
 #[tokio::main]
 async fn main() {
-    tracing_subscriber::fmt::init();
+    tracing_subscriber::fmt()
+        .with_env_filter(tracing_subscriber::filter::EnvFilter::new(
+            env::var("RUST_LOG").unwrap_or_else(|_| "info,sqlx=warn".to_string()),
+        ))
+        .init();
 
     let database_url = env::var("DATABASE_URL").expect("DATABASE_URL must be set");
 
+    info!("Connecting to database...");
     let pool = PgPoolOptions::new()
         .max_connections(5)
+        .acquire_timeout(std::time::Duration::from_secs(5))
         .connect(&database_url)
         .await
         .expect("Failed to connect to database");
+    info!("Database connected");
 
     let cors = CorsLayer::new().allow_origin(Any).allow_methods(Any);
+
+    let trace_layer = TraceLayer::new_for_http()
+        .make_span_with(|request: &Request<_>| {
+            info_span!("request", method = %request.method(), uri = %request.uri())
+        })
+        .on_response(|response: &Response, latency: std::time::Duration, _span: &Span| {
+            info!(status = %response.status(), latency = ?latency, "response");
+        });
 
     let app = Router::new()
         .route("/servers", get(get_servers))
@@ -688,6 +708,7 @@ async fn main() {
         .route("/servers/:ip/:port/history", get(get_server_history))
         .route("/servers/:ip/:port/stats", get(get_server_stats))
         .route("/stats", get(get_global_stats))
+        .layer(trace_layer)
         .layer(cors)
         .with_state(pool);
 
